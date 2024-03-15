@@ -1,10 +1,8 @@
 # Table of contents
 
-* [Welcome to the Digma Docs](README.md)
-
 ## Installation
 
-* [Local Install](installation/local-install.md)
+* [Local Install](README.md)
 * [Central Install](installation/central-install.md)
 
 ## Instrumentation
