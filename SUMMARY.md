@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Page](README.md)
+* [Welcome to the Digma Docs](README.md)
 
 ## Installation
 
@@ -13,7 +13,7 @@
 
 ## Insights
 
-* [Page 2](insights/page-2.md)
+* [Bottleneck](insights/bottleneck.md)
 
 ## Analytics
 
