@@ -17,7 +17,7 @@
 
 ## Analytics
 
-* [Page 1](analytics/page-1.md)
+* [Duration](analytics/duration.md)
 
 ## Framework Support
 
