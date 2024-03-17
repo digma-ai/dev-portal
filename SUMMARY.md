@@ -14,22 +14,24 @@
 
 ***
 
-* [Digma Concepts](digma-concepts.md)
-
-## Insights
-
-* [Suspected N+1](insights/suspected-n+1.md)
-* [Bottleneck](insights/bottleneck.md)
-* [Excessive API calls (chatty API)](insights/excessive-api-calls-chatty-api.md)
-* [Session In View Query  Detected](insights/session-in-view-query-detected.md)
-* [Query Optimization Suggested](insights/query-optimization-suggested.md)
-* [High number of queries](insights/high-number-of-queries.md)
-* [Scaling Issue](insights/scaling-issue.md)
-
-## Analytics
-
-* [Request Breakdown](analytics/request-breakdown.md)
-* [Duration](analytics/duration.md)
+* [Digma Concepts](digma-concepts/README.md)
+  * [Assets](digma-concepts/assets.md)
+  * [Environments](digma-concepts/environments.md)
+  * [Analytics](digma-concepts/analytics.md)
+  * [Insights](digma-concepts/insights.md)
+  * [Impact](digma-concepts/impact.md)
+  * [Criticality](digma-concepts/criticality.md)
+* [Insights](insights/README.md)
+  * [Suspected N+1](insights/suspected-n+1.md)
+  * [Excessive API calls (chatty API)](insights/excessive-api-calls-chatty-api.md)
+  * [Bottleneck](insights/bottleneck.md)
+  * [Scaling Issue](insights/scaling-issue.md)
+  * [Session In View Query  Detected](insights/session-in-view-query-detected.md)
+  * [Query Optimization Suggested](insights/query-optimization-suggested.md)
+  * [High number of queries](insights/high-number-of-queries.md)
+* [Page](page/README.md)
+  * [Request Breakdown](page/request-breakdown.md)
+  * [Duration](page/duration.md)
 
 ## Framework Support
 
