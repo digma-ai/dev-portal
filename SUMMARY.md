@@ -14,12 +14,12 @@
 
 ***
 
-* [Digma Concepts](digma-concepts/README.md)
+* [Digma Concepts](digma-concepts.md)
   * [Assets](digma-concepts/assets.md)
   * [Environments](digma-concepts/environments.md)
   * [Analytics](digma-concepts/analytics.md)
   * [Insights](digma-concepts/insights.md)
-  * [Impact](digma-concepts/impact.md)
+  * [Performance Impact](digma-concepts/performance-impact.md)
   * [Criticality](digma-concepts/criticality.md)
 * [Insights](insights/README.md)
   * [Suspected N+1](insights/suspected-n+1.md)
@@ -30,8 +30,8 @@
   * [Query Optimization Suggested](insights/query-optimization-suggested.md)
   * [High number of queries](insights/high-number-of-queries.md)
 * [Page](page/README.md)
-  * [Request Breakdown](page/request-breakdown.md)
-  * [Duration](page/duration.md)
+  * [Request Breakdown](analytics/request-breakdown.md)
+  * [Duration](analytics/duration.md)
 
 ## Framework Support
 

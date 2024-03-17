@@ -4,7 +4,7 @@ The easiest way to get started with Digma is to use the Digma plugin to automati
 
 To get started, make sure that that `Obervability` toggle is set to on. You can always use this control to turn auto-instrumentation on and off.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### How do I know if the automatic instrumentation worked?
 
