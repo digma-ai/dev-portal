@@ -9,7 +9,7 @@
 
 ## Instrumentation
 
-* [Page 3](instrumentation/page-3.md)
+* [Automatic Instrumentation in the IDE](instrumentation/automatic-instrumentation-in-the-ide.md)
 
 ## Insights
 
