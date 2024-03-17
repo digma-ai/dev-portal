@@ -5,7 +5,7 @@
 ## Installation
 
 * [Local Install](<README (1).md>)
-* [Central Install](installation/central-install.md)
+* [Central (on-prem) Install](installation/central-on-prem-install.md)
 
 ## Instrumentation
 
