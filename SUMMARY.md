@@ -14,13 +14,13 @@
 
 ***
 
-* [Digma Concepts](digma-concepts.md)
-  * [Assets](digma-concepts/assets.md)
-  * [Environments](digma-concepts/environments.md)
-  * [Analytics](digma-concepts/analytics.md)
-  * [Insights](digma-concepts/insights.md)
-  * [Performance Impact](digma-concepts/performance-impact.md)
-  * [Criticality](digma-concepts/criticality.md)
+* [Digma Core Concepts](digma-core-concepts/README.md)
+  * [Assets](digma-core-concepts/assets.md)
+  * [Environments](digma-core-concepts/environments.md)
+  * [Analytics](digma-core-concepts/analytics.md)
+  * [Insights](digma-core-concepts/insights.md)
+  * [Performance Impact](digma-core-concepts/performance-impact.md)
+  * [Criticality](digma-core-concepts/criticality.md)
 * [Insights](insights/README.md)
   * [Suspected N+1](insights/suspected-n+1.md)
   * [Excessive API calls (chatty API)](insights/excessive-api-calls-chatty-api.md)
