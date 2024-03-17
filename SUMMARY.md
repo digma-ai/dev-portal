@@ -14,6 +14,7 @@
 
 ***
 
+* [Page](page.md)
 * [Digma Core Concepts](digma-core-concepts/README.md)
   * [Assets](digma-core-concepts/assets.md)
   * [Environments](digma-core-concepts/environments.md)
@@ -29,7 +30,7 @@
   * [Session In View Query  Detected](insights/session-in-view-query-detected.md)
   * [Query Optimization Suggested](insights/query-optimization-suggested.md)
   * [High number of queries](insights/high-number-of-queries.md)
-* [Page](page/README.md)
+* [Analytics](analytics/README.md)
   * [Request Breakdown](analytics/request-breakdown.md)
   * [Duration](analytics/duration.md)
 
