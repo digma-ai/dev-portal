@@ -68,7 +68,3 @@ Digma also comes bundled as a Docker Extension. If you're using Docker Desktop y
 You can install the Digma Extension from the Docker Marketplace or by visiting the [extension page](https://hub.docker.com/extensions/digmaai/digma-docker-extension).&#x20;
 
 </details>
-
-
-
-1.
