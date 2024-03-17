@@ -6,4 +6,4 @@ description: >-
 
 # Duration
 
-<figure><img src="../.gitbook/assets/Duration - illustration.svg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Duration - illustration.svg" alt=""><figcaption></figcaption></figure>

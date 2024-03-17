@@ -6,4 +6,4 @@ description: >-
 
 # Excessive API calls (chatty API)
 
-<figure><img src="../.gitbook/assets/Excessive API Calls Detected - illustration.svg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Excessive API Calls Detected - illustration.svg" alt=""><figcaption></figcaption></figure>

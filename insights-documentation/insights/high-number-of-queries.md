@@ -7,4 +7,4 @@ description: >-
 
 # High number of queries
 
-<figure><img src="../.gitbook/assets/High number of queries - illustration.svg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/High number of queries - illustration.svg" alt=""><figcaption></figcaption></figure>

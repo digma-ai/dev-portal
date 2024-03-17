@@ -6,7 +6,7 @@ description: >-
 
 # Suspected N+1
 
-<figure><img src="../.gitbook/assets/Suspected N-Plus-1 - illustration.svg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Suspected N-Plus-1 - illustration.svg" alt=""><figcaption></figcaption></figure>
 
 ### Details
 

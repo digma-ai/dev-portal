@@ -7,4 +7,4 @@ description: >-
 
 # Bottleneck
 
-<figure><img src="../.gitbook/assets/Bottleneck - illustration.svg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Bottleneck - illustration.svg" alt=""><figcaption></figcaption></figure>

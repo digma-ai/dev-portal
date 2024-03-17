@@ -12,27 +12,28 @@
 * [Instrumenting your code from terminal](instrumentation/instrumenting-your-code-from-terminal.md)
 * [Automatic Instrumentation in the IDE](instrumentation/automatic-instrumentation-in-the-ide.md)
 
-***
+## Digma Core Concepts
 
-* [Page](page.md)
-* [Digma Core Concepts](digma-core-concepts/README.md)
-  * [Assets](digma-core-concepts/assets.md)
-  * [Environments](digma-core-concepts/environments.md)
-  * [Analytics](digma-core-concepts/analytics.md)
-  * [Insights](digma-core-concepts/insights.md)
-  * [Performance Impact](digma-core-concepts/performance-impact.md)
-  * [Criticality](digma-core-concepts/criticality.md)
-* [Insights](insights/README.md)
-  * [Suspected N+1](insights/suspected-n+1.md)
-  * [Excessive API calls (chatty API)](insights/excessive-api-calls-chatty-api.md)
-  * [Bottleneck](insights/bottleneck.md)
-  * [Scaling Issue](insights/scaling-issue.md)
-  * [Session In View Query  Detected](insights/session-in-view-query-detected.md)
-  * [Query Optimization Suggested](insights/query-optimization-suggested.md)
-  * [High number of queries](insights/high-number-of-queries.md)
-* [Analytics](analytics/README.md)
-  * [Request Breakdown](analytics/request-breakdown.md)
-  * [Duration](analytics/duration.md)
+* [Environments](digma-core-concepts/environments.md)
+* [Assets](digma-core-concepts/assets.md)
+* [Analytics](digma-core-concepts/analytics.md)
+* [Insights](digma-core-concepts/insights.md)
+* [Performance Impact](digma-core-concepts/performance-impact.md)
+* [Criticality](digma-core-concepts/criticality.md)
+
+## Insights Documentation
+
+* [Insights](insights-documentation/insights/README.md)
+  * [Suspected N+1](insights-documentation/insights/suspected-n+1.md)
+  * [Excessive API calls (chatty API)](insights-documentation/insights/excessive-api-calls-chatty-api.md)
+  * [Bottleneck](insights-documentation/insights/bottleneck.md)
+  * [Scaling Issue](insights-documentation/insights/scaling-issue.md)
+  * [Session In View Query  Detected](insights-documentation/insights/session-in-view-query-detected.md)
+  * [Query Optimization Suggested](insights-documentation/insights/query-optimization-suggested.md)
+  * [High number of queries](insights-documentation/insights/high-number-of-queries.md)
+* [Analytics](insights-documentation/analytics/README.md)
+  * [Request Breakdown](insights-documentation/analytics/request-breakdown.md)
+  * [Duration](insights-documentation/analytics/duration.md)
 
 ## Framework Support
 

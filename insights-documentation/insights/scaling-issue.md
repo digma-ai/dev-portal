@@ -7,4 +7,4 @@ description: >-
 
 # Scaling Issue
 
-<figure><img src="../.gitbook/assets/Scaling Issue Found - illustration.svg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Scaling Issue Found - illustration.svg" alt=""><figcaption></figcaption></figure>
