@@ -9,8 +9,12 @@
 
 ## Instrumentation
 
-* [Automatic Instrumentation in the IDE](instrumentation/automatic-instrumentation-in-the-ide.md)
 * [Instrumenting your code from terminal](instrumentation/instrumenting-your-code-from-terminal.md)
+* [Automatic Instrumentation in the IDE](instrumentation/automatic-instrumentation-in-the-ide.md)
+
+***
+
+* [Digma Concepts](digma-concepts.md)
 
 ## Insights
 
@@ -22,12 +26,9 @@
 * [High number of queries](insights/high-number-of-queries.md)
 * [Scaling Issue](insights/scaling-issue.md)
 
-***
-
-* [Page](page.md)
-
 ## Analytics
 
+* [Request Breakdown](analytics/request-breakdown.md)
 * [Duration](analytics/duration.md)
 
 ## Framework Support
