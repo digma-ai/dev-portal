@@ -9,8 +9,8 @@
 
 ## Instrumentation
 
-* [Instrumenting your code from terminal](instrumentation/instrumenting-your-code-from-terminal.md)
 * [Automatic Instrumentation in the IDE](instrumentation/automatic-instrumentation-in-the-ide.md)
+* [Instrumenting your code from terminal](instrumentation/instrumenting-your-code-from-terminal.md)
 
 ## Digma Core Concepts
 
