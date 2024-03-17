@@ -7,3 +7,11 @@ description: >-
 # Suspected N+1
 
 <figure><img src="../.gitbook/assets/Suspected N-Plus-1 - illustration.svg" alt=""><figcaption></figcaption></figure>
+
+### Details
+
+N+1 Select are numerous SELECT queries often caused by ORM models. They can be resolved by eager loading relationships or using JOIN expressions. These selects are often more costly in production where the database roundtrip time is longer.
+
+### Thresholds&#x20;
+
+The default threshold is an N of af at least `5` select queries on a relationship.

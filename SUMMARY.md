@@ -14,10 +14,17 @@
 
 ## Insights
 
-* [Query Optimization Suggested](insights/query-optimization-suggested.md)
-* [Scaling Issue](insights/scaling-issue.md)
 * [Suspected N+1](insights/suspected-n+1.md)
 * [Bottleneck](insights/bottleneck.md)
+* [Excessive API calls (chatty API)](insights/excessive-api-calls-chatty-api.md)
+* [Session In View Query  Detected](insights/session-in-view-query-detected.md)
+* [Query Optimization Suggested](insights/query-optimization-suggested.md)
+* [High number of queries](insights/high-number-of-queries.md)
+* [Scaling Issue](insights/scaling-issue.md)
+
+***
+
+* [Page](page.md)
 
 ## Analytics
 
