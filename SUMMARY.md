@@ -14,6 +14,7 @@
 
 ## Insights
 
+* [Suspected N+1](insights/suspected-n+1.md)
 * [Bottleneck](insights/bottleneck.md)
 
 ## Analytics
