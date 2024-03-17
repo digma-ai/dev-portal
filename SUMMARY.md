@@ -14,6 +14,7 @@
 
 ## Insights
 
+* [Query Optimization Suggested](insights/query-optimization-suggested.md)
 * [Scaling Issue](insights/scaling-issue.md)
 * [Suspected N+1](insights/suspected-n+1.md)
 * [Bottleneck](insights/bottleneck.md)
