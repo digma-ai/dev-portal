@@ -1,6 +1,6 @@
 # Spring, Spring Boot and default
 
-### Automatic OTEL agent instrumentation (default)&#x20;
+### 1. Automatic OTEL agent instrumentation (default)&#x20;
 
 This is the default strategy in most scenarios, when you enable the observability toggle, Digma will download and add the OTEL Java agent to the runtime configuration when you launch your application in the IDE. In addition,  the Digma agent extension is also downloaded and referenced to add additional instrumentation data.&#x20;
 
@@ -27,7 +27,7 @@ Digma purposely will not instrument \*everything\* as it can be harmful to add t
 
 <figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
-### Using the Observable API and Micrometer Tracing
+### 2. Using the Observable API and Micrometer Tracing
 
 Instead of using the OTEL agent, Digma can leverage Micrometer Tracing to collect information about your Spring application. You can select the Micrometer Tracing strategy from the Digma plugin settings page.  Open the IntelliJ settings screen and search for `Digma` to bring up the plugin options, then select `Micrometer` from the `Spring boot observability mode` dropdown.
 
