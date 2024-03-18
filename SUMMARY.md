@@ -42,6 +42,6 @@
 * [Performance Impact](digma-core-concepts/performance-impact.md)
 * [Criticality](digma-core-concepts/criticality.md)
 
-## Framework Support
+## Sample Projects
 
-* [Spring Boot](framework-support/page-4.md)
+* [Spring Boot](sample-projects/spring-boot.md)
