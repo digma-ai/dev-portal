@@ -27,9 +27,11 @@ Here are some examples:
 
 
 
+### Reviewing assets for your application or for specific APIs
 
+The Digma Assets tab provides an overview of all recorded assets which were discovered in the traces. You can quickly search or filter to specific services or endpoints, and sort by duration, critical insights, and even [performance impact.](performance-impact.md)&#x20;
 
-
+<figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
 
 
 
