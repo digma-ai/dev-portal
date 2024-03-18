@@ -6,11 +6,11 @@ To get started, make sure that that `Obervability` toggle is set to on. You can 
 
 
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 The next steps depend on the framework/library you use to run your code:
 
-* [spring-spring-boot-dropwizard-and-default](spring-spring-boot-dropwizard-and-default/ "mention")
+* [spring-spring-boot-dropwizard-and-default.md](spring-spring-boot-dropwizard-and-default.md "mention")
 
 
 
