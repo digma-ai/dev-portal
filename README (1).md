@@ -16,7 +16,7 @@ description: >-
 
 The Digma Plugin is available on the IntelliJ Marketplace.&#x20;
 
-<figure><img src=".gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 You can install the plugin from your IDE or open the plugin [page](https://plugins.jetbrains.com/plugin/19470-digma-continuous-feedback) in your browser. &#x20;
 
@@ -26,7 +26,7 @@ Digma runs locally on your machine. To process all of the captured traces, analy
 
 After the plugin installs you'll get to choose the preferred way to install the Digma Engine.  Several options are available:
 
-<figure><img src=".gitbook/assets/image (5).png" alt="" width="240"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (5) (1).png" alt="" width="240"><figcaption></figcaption></figure>
 
 <details>
 
@@ -34,7 +34,7 @@ After the plugin installs you'll get to choose the preferred way to install the 
 
 This is the default option. After installation, the plugin will try to start the Digme Engine containers on your local Docker environment and will offer clear controls to allow you to `Stop` `Start` or `Remove` it.  The benefit of using this approach is that Digma will be able to also update the Engine automatically when a new release becomes available.&#x20;
 
-![](<.gitbook/assets/image (4).png>)
+![](<.gitbook/assets/image (4) (1).png>)
 
 </details>
 
@@ -75,7 +75,7 @@ The Digma Engine is defined in a simple Docker Compose [file](https://github.com
 
 If you've run Digma via any of the first two options, you can check that the Analytics Engine containers are up and running. In the IDE you should see both the Observability side panel and the Insights side panel showing up with no errors and waiting to receive data.
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 
 
