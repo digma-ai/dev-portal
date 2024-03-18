@@ -26,6 +26,7 @@ Prerequisites:&#x20;
 
 * Access to a  [Kubernetes](https://kubernetes.io/) cluster&#x20;
 * [Helm](https://helm.sh/docs/intro/install/) installed locally
+* [Create a free Digma Account](https://digma.ai/sign-up) and receive back a license token
 
 The recommended way to install Digma in your org is using our Helm chart.
 
