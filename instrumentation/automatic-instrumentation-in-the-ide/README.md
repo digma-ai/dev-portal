@@ -41,8 +41,4 @@ If you're using Quarkus, then using the OTEL agent is not recommended. Instead, 
 
 When you open a project for the first time with Digma installed, the plugin will detect the presence of Quarkus modules and suggest to add and configure the OTEL extension if it is not present
 
-### How do I know if the automatic instrumentation worked?
-
-
-
-### Which configurations are automatically instrumented?
+###
