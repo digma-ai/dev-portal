@@ -41,7 +41,7 @@
   * [Duration Breakdown](digma-features/analytics/duration-breakdown.md)
   * [Endpoint Low/High Usage](digma-features/analytics/endpoint-low-high-usage.md)
 * [Performance Impact](digma-core-concepts/performance-impact.md)
-* [Criticality](digma-core-concepts/criticality.md)
+* [Issue Criticality](digma-features/issue-criticality.md)
 
 ## Sample Projects
 
