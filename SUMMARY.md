@@ -10,7 +10,8 @@
 ## Instrumentation
 
 * [Automatic Instrumentation in the IDE](instrumentation/automatic-instrumentation-in-the-ide/README.md)
-  * [Spring, Spring Boot and default](instrumentation/automatic-instrumentation-in-the-ide/spring-spring-boot-and-default.md)
+  * [Spring, Spring Boot, Dropwizard and default](instrumentation/automatic-instrumentation-in-the-ide/spring-spring-boot-dropwizard-and-default.md)
+  * [Quarkus, Micronaut](instrumentation/automatic-instrumentation-in-the-ide/quarkus-micronaut.md)
 * [Instrumenting your code from terminal](instrumentation/instrumenting-your-code-from-terminal.md)
 
 ## Digma Core Concepts
