@@ -34,3 +34,7 @@ With the observability toggle enabled, auto-instrumentation will automatically b
 However, Digma will purposely not instrument \*every\* Run Configuration, as it can be harmful to add the agent instrumentation to utility or build tasks. If Digma is not automatically adding instrumentation to your custom Gradle or Maven task, you can add the `DIGMA_OBSERVABILITY=true` environment variable. This will ensure the Digma Plugin will instrument the run configuration configuration.
 
 <figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+
+### How do I cover more of my code?
+
+Automatic instrumentation will provide tracing data for server libraries, database drivers, HTTP clients, queueing libraries, and more. However, if you want to cover more of your code you can use observability annotations or try out Digma's `Extended Observability` feature, still in beta. More details here.
