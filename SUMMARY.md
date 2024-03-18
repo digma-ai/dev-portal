@@ -25,7 +25,6 @@
 
 ## Digma Features
 
-* [Test observability](digma-features/test-observability.md)
 * [Issues](insights-documentation/insights/README.md)
   * [Suspected N+1](insights-documentation/insights/suspected-n+1.md)
   * [Excessive API calls (chatty API)](insights-documentation/insights/excessive-api-calls-chatty-api.md)
@@ -42,6 +41,7 @@
   * [Duration Breakdown](digma-features/analytics/duration-breakdown.md)
   * [Endpoint Low/High Usage](digma-features/analytics/endpoint-low-high-usage.md)
 * [Performance Impact](digma-core-concepts/performance-impact.md)
+* [Test observability](digma-features/test-observability.md)
 * [Issue Criticality](digma-core-concepts/criticality.md)
 
 ## Sample Projects
