@@ -16,7 +16,7 @@ description: >-
 
 The Digma Plugin is available on the IntelliJ Marketplace.&#x20;
 
-<figure><img src=".gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 You can install the plugin from your IDE or browse to the plugin [page](https://plugins.jetbrains.com/plugin/19470-digma-continuous-feedback). &#x20;
 

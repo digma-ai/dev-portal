@@ -66,7 +66,7 @@ To check everything is working properly we can check the pod status and make sur
 
 For example, this is the expected output:
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Step 4: Get the IP/DNS value for the Digma deployment**
 
@@ -102,7 +102,7 @@ Once Digma is up and running you can now set your IDE plugin to connect to it. T
 \
 
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Click ‘Apply’/’Ok’ to enable the changes and check that the Digma UI is not showing any connection errors.
 

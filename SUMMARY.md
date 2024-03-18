@@ -32,9 +32,13 @@
   * [Session In View Query  Detected](insights-documentation/insights/session-in-view-query-detected.md)
   * [Query Optimization Suggested](insights-documentation/insights/query-optimization-suggested.md)
   * [High number of queries](insights-documentation/insights/high-number-of-queries.md)
+  * [Slow Endpoint](digma-features/issues/slow-endpoint.md)
 * [Analytics](insights-documentation/analytics/README.md)
   * [Request Breakdown](insights-documentation/analytics/request-breakdown.md)
   * [Duration](insights-documentation/analytics/duration.md)
+  * [Code Nexus](digma-features/analytics/code-nexus.md)
+  * [Duration Breakdown](digma-features/analytics/duration-breakdown.md)
+  * [Endpoint Low/High Usage](digma-features/analytics/endpoint-low-high-usage.md)
 * [Performance Impact](digma-core-concepts/performance-impact.md)
 * [Criticality](digma-core-concepts/criticality.md)
 
