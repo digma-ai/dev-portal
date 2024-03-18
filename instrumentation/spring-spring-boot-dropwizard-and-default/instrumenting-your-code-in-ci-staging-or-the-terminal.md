@@ -1,4 +1,4 @@
-# Instrumenting your code in CI/Stagin or the terminal
+# Instrumenting your code in CI/Staging or the terminal
 
 The most straightforward way to instrument your application is simply to download the OTEL agent and Digma Extension files and then set some environment variables and system properties so that they can instrument the Java process.
 
@@ -19,7 +19,7 @@ java app.jar
 {% endcode %}
 
 * Make sure to substitute `OTEL_SERVICE_NAME` with your application name:
-* For the Digma environment name,  create an environment in Digma and follow the instructions or just type in "LOCAL"
+* Finally, you should assign the traces to a [Digma Environment](../../digma-core-concepts/environments.md).  You can simply enter `LOCAL` as a default value or create an environment in the Digma UI to see which value to enter here.&#x20;
 
 ###
 

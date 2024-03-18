@@ -12,7 +12,7 @@
 * [Spring, Spring Boot, Dropwizard, and default](instrumentation/automatic-instrumentation-in-the-ide/spring-spring-boot-dropwizard-and-default.md)
   * [Automatic Instrumentation in the IDE](instrumentation/spring-spring-boot-dropwizard-and-default/automatic-instrumentation-in-the-ide.md)
   * [Using Micrometer Tracing (Spring Boot 3.x only)](instrumentation/spring-spring-boot-dropwizard-and-default/using-micrometer-tracing-spring-boot-3.x-only.md)
-  * [Instrumenting your code in CI/Stagin or the terminal](instrumentation/spring-spring-boot-dropwizard-and-default/instrumenting-your-code-in-ci-stagin-or-the-terminal.md)
+  * [Instrumenting your code in CI/Staging or the terminal](instrumentation/spring-spring-boot-dropwizard-and-default/instrumenting-your-code-in-ci-staging-or-the-terminal.md)
   * [Instrumenting your application in Docker Compose](instrumentation/spring-spring-boot-dropwizard-and-default/instrumenting-your-application-in-docker-compose.md)
   * [Covering more of your code with Observability](instrumentation/spring-spring-boot-dropwizard-and-default/covering-more-of-your-code-with-observability.md)
 * [Quarkus, Micronaut](instrumentation/automatic-instrumentation-in-the-ide/quarkus-micronaut.md)
