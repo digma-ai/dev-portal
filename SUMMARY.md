@@ -15,7 +15,7 @@
   * [Instrumenting your code in CI/Staging or the terminal](instrumentation/spring-spring-boot-dropwizard-and-default/instrumenting-your-code-in-ci-staging-or-the-terminal.md)
   * [Instrumenting your application in Docker Compose](instrumentation/spring-spring-boot-dropwizard-and-default/instrumenting-your-application-in-docker-compose.md)
   * [Covering more of your code with Observability](instrumentation/spring-spring-boot-dropwizard-and-default/covering-more-of-your-code-with-observability.md)
-* [Quarkus, Micronaut, OpenLiberty](instrumentation/quarkus-micronaut-openliberty.md)
+* [Quarkus, Micronaut, OpenLiberty](instrumentation/automatic-instrumentation-in-the-ide/quarkus-micronaut.md)
 
 ## Digma Core Concepts
 
@@ -25,6 +25,7 @@
 
 ## Digma Features
 
+* [Test observability](digma-features/test-observability.md)
 * [Issues](insights-documentation/insights/README.md)
   * [Suspected N+1](insights-documentation/insights/suspected-n+1.md)
   * [Excessive API calls (chatty API)](insights-documentation/insights/excessive-api-calls-chatty-api.md)
