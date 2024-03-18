@@ -13,4 +13,4 @@ Insights that have a very high criticality score will be further highlighted in 
 
 <figure><img src="../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
-Finally, when using the Insights tab you can choose to sort by insight criticality to home in on the most critical insights.
+Finally, when using the Issues tab you can choose to sort by issue criticality to home in on the most critical issues.
