@@ -2,11 +2,13 @@
 
 Beyond the automatic instrumentation of server and client libraries, you may wish to achieve a better understanding of your code and domain logic by collecting more tracing data.
 
-### Using the @WithSpan annotations to observe specific methods&#x20;
+### Using the @WithSpan or @Observe annotations to observe specific methods&#x20;
 
 Digma makes it easy to add additional observability coverage to any location. Placing the cursor inside any method you can click on the Observability icon in the Insights side panel to quickly add an annotation that will include its data in the traces.
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+Note: If you're using the Micrometer Tracing observability strategy in Digma, clicking on `Add Observability` will add an @Observe annotation. Otherwise, the @WithSpan annotation will be used.
 
 ### Keeping track of specific values or parameters
 
