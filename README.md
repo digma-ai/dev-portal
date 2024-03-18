@@ -7,6 +7,12 @@ description: >-
 
 # Welcome to the Digma Docs!
 
+<div data-full-width="true">
+
+<figure><img src=".gitbook/assets/GitHub_bg@3x.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
 ### What you can find here
 
 * How to install Digma, [locally](<README (1).md>) or in your [K8s Cluster](installation/central-on-prem-install.md)
