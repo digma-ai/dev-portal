@@ -15,7 +15,7 @@
   * [Instrumenting your code in CI/Staging or the terminal](instrumentation/spring-spring-boot-dropwizard-and-default/instrumenting-your-code-in-ci-staging-or-the-terminal.md)
   * [Instrumenting your application in Docker Compose](instrumentation/spring-spring-boot-dropwizard-and-default/instrumenting-your-application-in-docker-compose.md)
   * [Covering more of your code with Observability](instrumentation/spring-spring-boot-dropwizard-and-default/covering-more-of-your-code-with-observability.md)
-* [Quarkus, Micronaut](instrumentation/automatic-instrumentation-in-the-ide/quarkus-micronaut.md)
+* [Quarkus, Micronaut, OpenLiberty](instrumentation/quarkus-micronaut-openliberty.md)
 
 ## Digma Core Concepts
 
