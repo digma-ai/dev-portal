@@ -7,7 +7,7 @@ description: >-
 
 # Welcome to the Digma Docs!
 
-<div data-full-width="true">
+<div data-full-width="false">
 
 <figure><img src=".gitbook/assets/GitHub_bg@3x.png" alt=""><figcaption></figcaption></figure>
 
