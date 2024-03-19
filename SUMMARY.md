@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Welcome to the Digma Docs!](README.md)
+* [What is a Continuous Feedback platform?](what-is-a-continuous-feedback-platform.md)
 
 ## Installation
 
