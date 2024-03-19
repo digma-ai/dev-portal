@@ -106,12 +106,12 @@ Once Digma is up and running you can now set your IDE plugin to connect to it. T
 
 <figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
-* Set the ‘Digma API URL’ parameter using the ANALYTICS-API value you’ve captured previously (By default this should be prefixed as ‘https’ and use port 5051)
-* Set the ‘Runtime observability backend URL’ parameter using the ‘COLLECTOR-API’ value you’ve captured previously
-* Set the ‘Api token’ parameter using the string value you used as an access token if you've provided one during setup. &#x20;
-* Set the ‘Jaeger Query URL’ (if this option was enabled) using the JAEGER address you’ve captured previously.
+* Set the `Digma API URL` parameter using the ANALYTICS-API value you’ve captured previously (By default this should be prefixed as ‘https’ and use port 5051)
+* Set the `Runtime observability backend URL` parameter using the ‘COLLECTOR-API’ value you’ve captured previously
+* Set the `Api token` parameter using the string value you used as an access token if you've provided one during setup. &#x20;
+* Set the `Jaeger Query URL`(if this option was enabled) using the JAEGER address you’ve captured previously.
 
-Click ‘Apply’/’Ok’ to enable the changes and check that the Digma UI is not showing any connection errors.
+Click `Apply`/`OK` to enable the changes and check that the Digma UI is not showing any connection errors.
 
 
 
