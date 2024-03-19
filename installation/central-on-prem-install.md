@@ -41,13 +41,14 @@ helm repo update
 
 You’ll need to provide the following parameters in the example below:
 
-* **API\_TOKEN** (any string) – This is a unique key you’ll need to provide any IDE that connects to this Digma instance
+* **API\_TOKEN** (any string) – This is a unique key you’ll need to provide any IDE that connects to this Digma instance, you can choose any token you'd like
 * **ENV\_NAME** – A name for this Digma deployment. This can be your org name or any name that would make sense to you
 * **ENABLE\_JAEGER** (true/false) – Setting this to True will expose the port for the Jaeger instance included with Digma. If you’re using your own APM and want to link to that instead, you can leave that at the default value (false)
+* **DIGMA\_LICENSE (string)** - If you've signed up for a free Digma account you should have received a Digma license to use. You can use this link to sign up: [Create a free Digma Account](https://digma.ai/sign-up)
 
 {% code overflow="wrap" %}
 ```bash
-helm install digma digma/digma --set digmaAnalytics.accesstoken=[API_TOKEN],digma.environmentName=[ENV_NAME],embeddedJaeger.enabled=[ENABLE_JAEGER] --namespace digma --create-namespace
+helm install digma digma/digma --set digmaAnalytics.accesstoken=[API_TOKEN],digma.environmentName=[ENV_NAME],embeddedJaeger.enabled=[ENABLE_JAEGER],licenseKey=[DIGMA_LICENSE] --namespace digma --create-namespace
 ```
 {% endcode %}
 
