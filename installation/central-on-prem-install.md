@@ -45,7 +45,7 @@ You’ll need to provide the following parameters in the example below:
 
 {% code overflow="wrap" %}
 ```bash
-helm install digma digma/digma --set licenseKey=[DIGMA_LICENSE] --namespace digma --create-namespace
+helm install digma digma/digma --set digma.licenseKey=[DIGMA_LICENSE] --namespace digma --create-namespace
 ```
 {% endcode %}
 
