@@ -7,7 +7,7 @@ description: >-
 
 # Central (on-prem) Install
 
-### Understanding the Deployment Architecture
+Understanding the Deployment Architecture
 
 Digma is deployed into the K8s cluster into its own namespace. Depending on your application deployment architecture you may want to deploy Digma with different parameters to enable the right connectivity.\
 
@@ -113,6 +113,8 @@ Once Digma is up and running you can now set your IDE plugin to connect to it. T
 * Set the `Jaeger Query URL`(if this option was enabled) using the JAEGER address you’ve captured previously.
 
 Click `Apply`/`OK` to enable the changes and check that the Digma UI is not showing any connection errors.
+
+
 
 
 
