@@ -12,15 +12,18 @@ curl --create-dirs -O -L --output-dir ./otel https://github.com/digma-ai/otel-ja
 
 export JAVA_TOOL_OPTIONS="-javaagent:/otel/opentelemetry-javaagent.jar -Dotel.exporter.otlp.endpoint=[DIGMA_URL] -Dotel.javaagent.extensions=/otel/digma-otel-agent-extension.jar -Dotel.metrics.exporter=none -Dotel.logs.exporter=none -Dotel.exporter.otlp.protocol=grpc" 
 
-export OTEL_SERVICE_NAME={--ENTER YOUR SERVICE NAME HERE--} export OTEL_RESOURCE_ATTRIBUTES=digma.environment={--ENTER THE DIGMA ENVIRONMENT NAME HERE--}
+export OTEL_SERVICE_NAME=[SERVICE_NAME]
+ export OTEL_RESOURCE_ATTRIBUTES=digma.environment=[ENVIRONMENT_NAME]
 
 java app.jar
 ```
 {% endcode %}
 
-* Replace the DIGMA\_URL with your Digma collector-api address. Installing locally this would be http://localhost:5050 by default
-* Make sure to substitute `OTEL_SERVICE_NAME` with your application name:
-* Finally, you should assign the traces to a [Digma Environment](../../digma-core-concepts/environments.md).  You can simply enter `LOCAL` as a default value or create an environment in the Digma UI to see which value to enter here.&#x20;
+Substitute the following values:
+
+* Replace \[DIGMA\_URL] with your Digma Collector-API address. If you're running Digma locally this would be http://localhost:5050 by default
+* Make sure to substitute \[`SERVICE_NAME]` with your application name:
+* Substitute the \[ENVIRONMENT\_NAME] value based on the environment context in Digma.  You can simply enter `LOCAL` as a default value or create an environment in the Digma UI to see which value to enter here.&#x20;
 
 ###
 
