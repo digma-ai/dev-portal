@@ -8,3 +8,11 @@ description: >-
 # Bottleneck
 
 <figure><img src="../../.gitbook/assets/Bottleneck - illustration.svg" alt=""><figcaption></figcaption></figure>
+
+### Description
+
+This area significantly slows down the entire request. You should consider making this code asynchronous or otherwise optimize it.
+
+### Thresholds
+
+At least 30% of request time and a minimum duration of 20ms.

@@ -8,7 +8,7 @@ description: >-
 
 <figure><img src="../../.gitbook/assets/Suspected N-Plus-1 - illustration.svg" alt=""><figcaption></figcaption></figure>
 
-### Details
+### Description
 
 N+1 Select are numerous SELECT queries often caused by ORM models. They can be resolved by eager loading relationships or using JOIN expressions. These selects are often more costly in production where the database roundtrip time is longer.
 
