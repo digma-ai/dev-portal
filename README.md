@@ -2,16 +2,12 @@
 description: >-
   This is the home of everything related to the Digma Continuous Feedback
   platform - how to install and configure it (locally on centrally) and how to
-  make the most out of its features and capability
+  make the most out of its features and capabilities
 ---
 
 # Welcome to the Digma Docs!
 
-<div data-full-width="false">
-
-<figure><img src=".gitbook/assets/GitHub_bg@3x.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<figure><img src=".gitbook/assets/IMG_9539.jpeg" alt=""><figcaption></figcaption></figure>
 
 ### What you can find here
 
