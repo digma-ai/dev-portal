@@ -20,7 +20,8 @@
 
 ## Use Cases (WIP)
 
-* [See code usage, analytics and bottlenecks](use-cases-wip/see-code-usage-analytics-and-bottlenecks.md)
+* [Understand the application flows better for faster development](use-cases-wip/understand-the-application-flows-better-for-faster-development.md)
+* [Find code issues early](use-cases-wip/find-code-issues-early.md)
 
 ## Digma Core Concepts
 

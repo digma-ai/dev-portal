@@ -66,12 +66,18 @@ You can install the Digma Extension from the Docker Marketplace or by visiting t
 
 The Digma Engine is defined in a simple Docker Compose [file](https://github.com/digma-ai/digma/blob/main/docker/docker-compose.yml) that is available online and consists of four containers:
 
-* `Digma Compound`- This container holds the Digma backend service for processing traces
+* `Digma Compound`- This container holds the Digma analytics engine for processing traces
 * `Digma Persistence` - DBs and storage for processing the time series data and aggregating it
 * `Jaeger` - An embedded Jaeger instance that also has additional features for linking spans with code
 * `Digma DS` - All of the data science and ML logic for detecting anomalies, calculating correlations, etc
 
 ### Changing the default ports
+
+Digma exposes three ports for a local install:
+
+* Jaeger port (default `17686`) - This allows the plugin to show traces from internal Digma Jaeger instance&#x20;
+* Digma API (default `5051`) - This is the port the IntelliJ plugin uses to communicate with the Digma Analitcs Engine to show insights, assets etc.
+* Collector API (default `5050`) - Used to send traces to Digma from your Java application.&#x20;
 
 The easiest way to chance the default ports if they conflict with anything on your machine is to install Digma locally using the Docker Compose file and simply change the port mapping.
 
@@ -103,6 +109,10 @@ If you need to change the default collector port (:5050),  the change also requi
     environment:
       - Collector.Endpoints__Default__Port=NEW_COLLECTOR_PORT    
 ```
+
+Finally, update the new ports in the plugin settings page which you can access via the IntellIJ settings page.
+
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### How do I know Digma is Running?
 
