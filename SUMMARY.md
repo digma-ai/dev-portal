@@ -18,6 +18,10 @@
   * [Covering more of your code with Observability](instrumentation/spring-spring-boot-dropwizard-and-default/covering-more-of-your-code-with-observability.md)
 * [Quarkus, Micronaut, OpenLiberty](instrumentation/automatic-instrumentation-in-the-ide/quarkus-micronaut.md)
 
+## Use Cases (WIP)
+
+* [See code usage, analytics and bottlenecks](use-cases-wip/see-code-usage-analytics-and-bottlenecks.md)
+
 ## Digma Core Concepts
 
 * [Environments](digma-core-concepts/environments.md)

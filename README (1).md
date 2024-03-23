@@ -71,6 +71,39 @@ The Digma Engine is defined in a simple Docker Compose [file](https://github.com
 * `Jaeger` - An embedded Jaeger instance that also has additional features for linking spans with code
 * `Digma DS` - All of the data science and ML logic for detecting anomalies, calculating correlations, etc
 
+### Changing the default ports
+
+The easiest way to chance the default ports if they conflict with anything on your machine is to install Digma locally using the Docker Compose file and simply change the port mapping.
+
+The default Digma API or Jaeger ports simply add the below:
+
+```
+  jaeger:
+    image: jaegertracing/all-in-one:1.45.0
+    expose:
+      - "5317"
+    ports:
+      - "[NEW_JAEGER_PORT]:16686"
+      
+  digma-compound:
+    image: digmatic/digma-compound:0.2.249
+    ports:
+      - "5050:5050"
+      - "[NEW_API_PORT]:5051"
+```
+
+If you need to change the default collector port (:5050),  the change also requires setting en env variable as folows:
+
+```
+  digma-compound:
+    image: digmatic/digma-compound:0.2.249
+    ports:
+      - “[NEW_COLLECTOR_PORT:NEW_COLLECTOR_PORT”
+      - “5051:5051"
+    environment:
+      - Collector.Endpoints__Default__Port=NEW_COLLECTOR_PORT    
+```
+
 ### How do I know Digma is Running?
 
 If you've run Digma via any of the first two options, you can check that the Analytics Engine containers are up and running. In the IDE you should see both the Observability side panel and the Insights side panel showing up with no errors and waiting to receive data.
