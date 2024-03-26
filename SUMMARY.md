@@ -20,8 +20,9 @@
 
 ## Use Cases (WIP)
 
-* [Understand the application flows better for faster development](use-cases-wip/understand-the-application-flows-better-for-faster-development.md)
-* [Find code issues early](use-cases-wip/find-code-issues-early.md)
+* [Design and write code more efficiently by understanding the system flows](use-cases-wip/design-and-write-code-more-efficiently-by-understanding-the-system-flows.md)
+* [Get early feedback about code changes](use-cases-wip/get-early-feedback-about-code-changes.md)
+* [Prioritize Technical Debt](use-cases-wip/prioritize-technical-debt.md)
 
 ## Digma Core Concepts
 
