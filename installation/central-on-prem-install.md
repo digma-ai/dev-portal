@@ -7,7 +7,7 @@ description: >-
 
 # Central (on-prem) Install
 
-Understanding the Deployment Architecture
+### Understanding the Deployment Architecture
 
 Digma is deployed into the K8s cluster into its own namespace. Depending on your application deployment architecture you may want to deploy Digma with different parameters to enable the right connectivity.\
 
@@ -51,16 +51,61 @@ helm install digma digma/digma --set digma.licenseKey=[DIGMA_LICENSE] --namespac
 
 **Other optional parameters:**
 
-* `size` (small | medium | large) - The cluster can be deployed in multiple scales, depending on the exected load. The default sizing is `medium`. If you select a size that is too small to handle the number of spans per second, you'll get a message from the Digma plugin prompting you to upgrade to bigger size.
+* `size` (small | medium | large) - The cluster can be deployed in multiple scales, depending on the exected load. The default sizing is `medium`. If you select a size that is too small to handle the number of spans per second, you'll get a message from the Digma plugin prompting you to upgrade to a bigger size.
 * `digmaAnalytics.accesstoken`(any string): This is a unique key you’ll need to provide any IDE that connects to this Digma instance, you can choose any token you'd like.&#x20;
 * `embeddedJaeger.enabled`  (true/false) – Setting this to False will not expose the port for the Jaeger instance included with Digma. If you’re using your own APM and want to link to that instead, you can leave that at the default value (false)
 
-**Cloud Deployment**
+### **Cloud Deployment**
 
-If you’re deploying Digma to a cloud Kubernetes provides such as EKS/AKS or just a publicly hosted K8s cluster, there are additional control parameters you can set:
+<details>
 
-* `digmaAnalytics.expose` (true/false): Controls whether the API used to communicate with the IDE plugin is exposed via a public IP (though protected with the `digmaAnalytics.accesstoken` if set) or on the internal network only
-* `digmaCollectorApi.expose` (true/false): Controls the same setting for the collector API (receiving inbound observability from your application)
+<summary>AWS</summary>
+
+Digma can be set up to use either a public or an internal DNS. You should choose the option that better suits your requirements. &#x20;
+
+#### Internal DNS
+
+Use the below `values` file to set up your AWS deployment using internal load balancers.
+
+{% code overflow="wrap" %}
+```bash
+helm install digma digma/digma --values https://raw.githubusercontent.com/digma-ai/helm-chart/main/src/digma-configs/aws-internal.yaml --set digma.licenseKey=[DIGMA_LICENSE] --namespace digma --create-namespace
+```
+{% endcode %}
+
+#### External DNS
+
+Use the below `values` file to set up your AWS deployment using external facing load balancers.
+
+{% code overflow="wrap" %}
+```bash
+helm install digma digma/digma --values https://raw.githubusercontent.com/digma-ai/helm-chart/main/src/digma-configs/aws-internet.yaml --set digma.licenseKey=[DIGMA_LICENSE] --namespace digma --create-namespace
+```
+{% endcode %}
+
+</details>
+
+<details>
+
+<summary>GKE</summary>
+
+#### Internal DNS
+
+{% code overflow="wrap" %}
+```bash
+helm install digma digma/digma --values https://raw.githubusercontent.com/digma-ai/helm-chart/main/src/digma-configs/gcp-internal.yaml --set digma.licenseKey=[DIGMA_LICENSE] --namespace digma --create-namespace
+```
+{% endcode %}
+
+#### External DNS
+
+{% code overflow="wrap" %}
+```bash
+helm install digma digma/digma --values https://raw.githubusercontent.com/digma-ai/helm-chart/main/src/digma-configs/gcp-internet.yaml --set digma.licenseKey=[DIGMA_LICENSE] --namespace digma --create-namespace
+```
+{% endcode %}
+
+</details>
 
 **Step 3: Validating the deployment**
 
