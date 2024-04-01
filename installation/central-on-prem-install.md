@@ -91,7 +91,9 @@ helm install digma digma/digma --values https://raw.githubusercontent.com/digma-
 
 <summary>GKE</summary>
 
-#### Internal DNS
+#### Internal passthrough
+
+Using this value file will set up the GKE deployment using an internal load balancer service&#x20;
 
 {% code overflow="wrap" %}
 ```bash
@@ -100,6 +102,8 @@ helm install digma digma/digma --values https://raw.githubusercontent.com/digma-
 {% endcode %}
 
 #### External DNS
+
+If you need to create an external internet-facing load balancer service instead, use the following value file:
 
 {% code overflow="wrap" %}
 ```bash
