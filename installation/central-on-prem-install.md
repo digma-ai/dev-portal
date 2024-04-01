@@ -57,6 +57,8 @@ helm install digma digma/digma --set digma.licenseKey=[DIGMA_LICENSE] --namespac
 
 ### **Cloud Deployment**
 
+**In order to ease the process of setting up cloud-specific resources such as load balancers, we've created some value files you can use to set up the intended networking.**
+
 <details>
 
 <summary>AWS</summary>
