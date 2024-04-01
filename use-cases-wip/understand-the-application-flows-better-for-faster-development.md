@@ -4,7 +4,7 @@ description: >-
   out changes faster and without issues.
 ---
 
-# Understand the application flows better for faster development
+# Design and write code more efficiently by understanding the system flows
 
 ### See runtime usages
 
