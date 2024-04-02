@@ -12,7 +12,7 @@ Digma overlays observability over code, so developers are able to see the applic
 
 <figure><img src="../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
 
-### Traces tied to theh code
+### Traces tied to the code
 
 Each flow include a sample trace for that specific flow, which in turn is fully connected back to the code, so developers can transition from code to trace and vice versa while staying inside the IDE.&#x20;
 
