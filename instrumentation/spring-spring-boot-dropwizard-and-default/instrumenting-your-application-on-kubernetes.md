@@ -17,7 +17,7 @@ If your application is running on Kubernetes you can easily instrument it using 
 * `PATH_TO_HELPER_REPO_ROOT`: The location where you cloned the helper repo to
 * `DIGMA_COLLECTOR_URL`: The URL of the Digma collector endpoint and port. For example: `http://internal.collector.dns:5050`
 * `ENVIRONMENT_NAME`: The Digma [Environment](../../digma-core-concepts/environments.md) that will be associated with this application deployment observability (e.g. `TEST`, `PERF_TESTS`, `STAGING`)
-* `LABEL_TARGET_SELECTOR`: These are selectors used to select which application to apply the instrumentation [patch](https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/patches/) to.&#x20;
+* `LABEL_TARGET_SELECTOR`: These are selectors used to select which application to apply the instrumentation [patch](https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/patches/) on.&#x20;
 
 Following the last step, you should have two generated files in your local directory: `patch.yaml` and `kustomization.yaml` these will be used to patch in the instrumentation logic when you run the Helm file in the step.
 
