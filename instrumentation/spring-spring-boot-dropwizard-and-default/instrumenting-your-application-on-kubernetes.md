@@ -10,7 +10,7 @@ If your application is running on Kubernetes you can easily instrument it using 
 
 ```
 sudo chmod +x ./kustomize/kustomize_build.sh
-sudo chmod +x ./kustomize/prepare.sh
+sudo chmod +x ./kustomize/create_customization.sh
 ```
 
 4. Run the `create_customization.sh` script. You'll need to pass it some parameters based on the application  and the Digma `collector-api` IP/DNS address (read more [here](../../installation/central-on-prem-install.md)). Once you run this command, the helper scripts will generate a patch that can be applied with your Helm file to instrument the application. &#x20;
