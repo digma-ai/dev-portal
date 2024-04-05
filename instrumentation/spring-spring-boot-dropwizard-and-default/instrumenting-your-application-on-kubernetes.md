@@ -26,7 +26,7 @@ sudo chmod +x ./kustomize/create_customization.sh
 * `ENVIRONMENT_NAME`: The Digma [Environment](../../digma-core-concepts/environments.md) that will be associated with this application deployment observability (e.g. `TEST`, `PERF_TESTS`, `STAGING`)
 * `LABEL_TARGET_SELECTOR`: These are selectors used to select which application to apply the instrumentation [patch](https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/patches/) on.&#x20;
 
-Following the last step, you should have two generated files in your local directory: `patch.yaml` and `kustomization.yaml` these will be used to patch in the instrumentation logic when you run the Helm file in the step.
+Following the last step, you should have two generated files in your local directory: `patch.yaml` and `kustomization.yaml` these will be used to patch in the instrumentation logic when you run the Helm file in the next step.
 
 5. Finally, run your helm file with an additional  `--post-renderer` argument
 
