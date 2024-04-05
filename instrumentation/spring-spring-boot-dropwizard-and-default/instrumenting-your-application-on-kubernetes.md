@@ -32,7 +32,7 @@ Following the last step, you should have two generated files in your local direc
 
 {% code overflow="wrap" %}
 ```bash
-helm template [NAME] [PATH_TO_HELM_CHART] -n [NAMESPACE} --post-renderer [PATH_TO_HELPER_REPO_ROOT]/kustomize/kustomize_build.sh 
+helm install [NAME] [PATH_TO_HELM_CHART] -n [NAMESPACE} --post-renderer [PATH_TO_HELPER_REPO_ROOT]/kustomize/kustomize_build.sh 
 ```
 {% endcode %}
 
