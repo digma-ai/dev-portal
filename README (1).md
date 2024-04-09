@@ -8,7 +8,7 @@ description: >-
 
 ## Prerequisites
 
-1. [IntelliJ](https://www.jetbrains.com/idea/) Community or Ultimate Edition
+1. [IntelliJ](https://www.jetbrains.com/idea/) Community or Ultimate Edition (2022.3 and up are supported, though latest is recommended)
 2. An application running [Java](https://www.java.com/en/) or [Kotlin](https://kotlinlang.org/) code
 3. Docker installed and running - Can be either [Docker Desktop](https://www.docker.com/products/docker-desktop/), [Podman](https://podman.io/),  [Rancher Desktop](https://rancherdesktop.io/) or [Colima](https://www.google.com/search?q=colima\&rlz=1C5CHFA\_enUS977US977\&oq=Colima\&gs\_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyBggCEEUYOzIHCAMQABiPAjIGCAQQRRg7MgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEIMTUwM2owajSoAgCwAgE\&sourceid=chrome\&ie=UTF-8)&#x20;
 
