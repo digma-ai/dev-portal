@@ -53,7 +53,7 @@ This is often related to memory limits related to the resources assigned to your
 
 1. Try increasing the memory available to the Docker VM to at least 3GB
 2. Check the docker logs for the restarting container to pick up on any issues
-3. If you are using Docker Desktop make sure you update it to the latest release
+3. If you are using Docker Desktop make sure you update it to the latest release. Some older versions of Docker Desktop suffer from know problems that affect Digma.
 
 </details>
 

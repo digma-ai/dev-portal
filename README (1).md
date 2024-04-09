@@ -14,7 +14,7 @@ description: >-
 
 <details>
 
-<summary>Note for Colima Users</summary>
+<summary>Note to Colima Users</summary>
 
 Please make sure to set the memory size to at least 3GB as we've had complaints of issues with memory sizes smaller than that.
 
