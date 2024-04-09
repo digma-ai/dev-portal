@@ -20,6 +20,7 @@
   * [Instrumenting your application on Kubernetes](instrumentation/spring-spring-boot-dropwizard-and-default/instrumenting-your-application-on-kubernetes.md)
   * [Covering more of your code with Observability](instrumentation/spring-spring-boot-dropwizard-and-default/covering-more-of-your-code-with-observability.md)
 * [Quarkus, Micronaut, OpenLiberty](instrumentation/automatic-instrumentation-in-the-ide/quarkus-micronaut.md)
+* [Instrumentation Troubleshooting](instrumentation/instrumentation-troubleshooting.md)
 
 ## Use Cases (WIP)
 
