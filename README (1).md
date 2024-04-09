@@ -76,6 +76,12 @@ You can install the Digma Extension from the Docker Marketplace or by visiting t
 
 
 
+3. (Optional) If you have a product key please enter it in the configuration stage of the onboarding process along with your email
+
+
+
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
 ### How do I know Digma is Running?
 
 If you've run Digma via any of the first two options, you can check that the Analytics Engine containers are up and running. In the IDE you should see both the Observability side panel and the Insights side panel showing up with no errors and waiting to receive data.
