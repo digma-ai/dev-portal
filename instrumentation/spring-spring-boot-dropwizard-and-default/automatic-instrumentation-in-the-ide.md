@@ -35,6 +35,4 @@ However, Digma will purposely not instrument \*every\* Run Configuration, as it 
 
 <figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
-### How do I cover more of my code?
-
-Automatic instrumentation will provide tracing data for server libraries, database drivers, HTTP clients, queueing libraries, and more. However, if you want to cover more of your code you can use observability annotations or try out Digma's `Extended Observability` feature, still in beta. More details here.
+###
