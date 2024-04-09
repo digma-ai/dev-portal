@@ -12,11 +12,17 @@ description: >-
 2. An application running [Java](https://www.java.com/en/) or [Kotlin](https://kotlinlang.org/) code
 3. Docker installed and running - Can be either [Docker Desktop](https://www.docker.com/products/docker-desktop/), [Podman](https://podman.io/),  [Rancher Desktop](https://rancherdesktop.io/) or [Colima](https://www.google.com/search?q=colima\&rlz=1C5CHFA\_enUS977US977\&oq=Colima\&gs\_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyBggCEEUYOzIHCAMQABiPAjIGCAQQRRg7MgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEIMTUwM2owajSoAgCwAgE\&sourceid=chrome\&ie=UTF-8)&#x20;
 
-Colima users: Please make sure to set the memory size to at least 3GB as we've had complains of issues with memory sizes small than that)
+<details>
+
+<summary>Note for Colima Users</summary>
+
+Please make sure to set the memory size to at least 3GB as we've had complaints of issues with memory sizes smaller than that.
 
 ```bash
 colima start --memory 3
 ```
+
+</details>
 
 ## 1. Install the Digma plugin in the IDE marketplace
 
