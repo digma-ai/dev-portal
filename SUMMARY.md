@@ -5,7 +5,9 @@
 
 ## Installation
 
-* [Local Install](<README (1).md>)
+* [Local Install](installation/local-install/README.md)
+  * [Local Install Architecture](installation/local-install/local-install-architecture.md)
+  * [Installation Troubleshooting](installation/local-install/installation-troubleshooting.md)
 * [Central (on-prem) Install](installation/central-on-prem-install.md)
 
 ## Instrumentation
