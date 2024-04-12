@@ -122,7 +122,7 @@ helm install digma digma/digma --values https://raw.githubusercontent.com/digma-
 
 **Step 3: Validating the deployment**
 
-To check everything is working properly we can check the pod status and make sure they are all in the ‘Running’ state:
+To check everything is working properly we can check the pod status and make sure they are all in the "Running" state:
 
 `kubectl get pods -n digma`
 
@@ -151,7 +151,7 @@ You can try calling the following API to validate connectivity and ensure Digma 
 {% code overflow="wrap" %}
 
 ```bash
-curl -k -X ‘GET’ \ ‘https://<ANALYTICS-API>:5051/api/Diagnostic’ \ -H “Authorization: Token <API_TOKEN>” -H ‘accept: application/json’
+curl -k -X 'GET' \ 'https://<ANALYTICS-API>:5051/api/Diagnostic' \ -H "Authorization: Token <API_TOKEN>" -H 'accept: application/json'
 ```
 
 {% endcode %}
@@ -160,12 +160,12 @@ If you received a non-error response back you’re good to go for the next step!
 
 ### Connecting your IDE to the Org Digma deployment
 
-Once Digma is up and running you can now set your IDE plugin to connect to it. To do that, open the plugin settings (Go to IntelliJ IDEA -> Settings/Preferences and search for ‘Digma’)
+Once Digma is up and running you can now set your IDE plugin to connect to it. To do that, open the plugin settings (Go to IntelliJ IDEA -> Settings/Preferences and search for "Digma")
 
 <figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
-* Set the `Digma API URL` parameter using the ANALYTICS-API value you’ve captured previously (By default this should be prefixed as ‘https’ and use port 5051)
-* Set the `Runtime observability backend URL` parameter using the ‘COLLECTOR-API’ value you’ve captured previously
+* Set the `Digma API URL` parameter using the ANALYTICS-API value you’ve captured previously (By default this should be prefixed as "https" and use port 5051)
+* Set the `Runtime observability backend URL` parameter using the "COLLECTOR-API" value you’ve captured previously
 * Set the `Api token` parameter using the string value you used as an access token if you've provided one during setup.
 * Set the `Jaeger Query URL`(if this option was enabled) using the JAEGER address you’ve captured previously.
 
