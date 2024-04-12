@@ -44,7 +44,7 @@ After the plugin installs you'll get to choose the preferred way to install the 
 
 <summary>Auto install  (Default)</summary>
 
-This is the default option. After installation, the plugin will try to start the Digme Engine containers on your local Docker environment and will offer clear controls to allow you to `Stop` `Start` or `Remove` it.  The benefit of using this approach is that Digma will be able to also update the Engine automatically when a new release becomes available.&#x20;
+This is the default option. After installation, the plugin will try to start the Digma Engine containers on your local Docker environment and will offer clear controls to allow you to `Stop` `Start` or `Remove` it.  The benefit of using this approach is that Digma will be able to also update the Engine automatically when a new release becomes available.&#x20;
 
 ![](<.gitbook/assets/image (4) (1) (1) (1).png>)
 
@@ -60,7 +60,7 @@ Simply select the `Docker Compose` tab from the onboarding page and follow the i
 
 ![](<.gitbook/assets/image (6).png>)
 
-Notice that you can use this method to deploy to other Docker platforms Both Rancher Desktop and Podman support the Docker Compose spec so you can use [Rancher Compose](https://rancher.com/docs/rancher/v1.6/en/cattle/rancher-compose/) or  [Podman Compose ](https://docs.podman.io/en/latest/markdown/podman-compose.1.html)respectively. &#x20;
+Notice that you can use this method to deploy to other Docker platforms Both Rancher Desktop and Podman support the Docker Compose spec so you can use [Rancher Compose](https://rancher.com/docs/rancher/v1.6/en/cattle/rancher-compose/) or [Podman Compose](https://docs.podman.io/en/latest/markdown/podman-compose.1.html) respectively. &#x20;
 
 </details>
 

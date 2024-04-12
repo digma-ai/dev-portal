@@ -1,7 +1,7 @@
 ---
 description: >-
-  This insight provides an indication if a particulat endpoint is slower than
-  others by a substancial degree
+  This insight provides an indication if a particular endpoint is slower than
+  others by a substantial degree
 ---
 
 # Slow Endpoint
