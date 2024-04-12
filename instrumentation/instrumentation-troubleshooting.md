@@ -15,11 +15,6 @@ There could be multiple reasons for this. There are several things to check in s
 
 <img src="../.gitbook/assets/image (34).png" alt="" data-size="original">
 
-
-
 </details>
 
-
-
 Can't find the answers you are looking for? Try out [Slack](https://join.slack.com/t/continuous-feedback/shared\_invite/zt-1hk5rbjow-yXOIxyyYOLSXpCZ4RXstgA) channel.
-

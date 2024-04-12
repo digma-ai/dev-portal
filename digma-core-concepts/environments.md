@@ -27,9 +27,9 @@ Once you've installed Digma centrally you can create shared environments that ar
 
 ### How to create environments
 
-Beyond the default environments, creating additional private or shared environments requires registering for a Digma Account (which is free and available at this [link](https://digma.ai/sign-up)).&#x20;
+Beyond the default environments, creating additional private or shared environments requires registering for a Digma Account (which is free and available at this [link](https://digma.ai/sign-up)).
 
-Private environments are easy to create in your local deployment from the Observability Panel and through the `Add Environment` button.&#x20;
+Private environments are easy to create in your local deployment from the Observability Panel and through the `Add Environment` button.
 
 <figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 

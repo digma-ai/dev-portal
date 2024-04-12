@@ -15,7 +15,7 @@ To change the default Digma API or Jaeger ports simply add the below:
       - "5317"
     ports:
       - "[NEW_JAEGER_PORT]:16686"
-      
+
   digma-compound:
     image: digmatic/digma-compound:0.2.249
     ports:
@@ -32,16 +32,12 @@ If you need to change the default collector port (:5050), the change also requir
       - “[NEW_COLLECTOR_PORT:NEW_COLLECTOR_PORT”
       - “5051:5051"
     environment:
-      - Collector.Endpoints__Default__Port=NEW_COLLECTOR_PORT    
+      - Collector.Endpoints__Default__Port=NEW_COLLECTOR_PORT
 ```
 
 Finally, update the new ports in the plugin settings page which you can access via the IntelliJ settings page:
 
 <img src="../../.gitbook/assets/image (24) (1).png" alt="" data-size="original">
-
-
-
-
 
 </details>
 
@@ -57,4 +53,4 @@ This is often related to memory limits related to the resources assigned to your
 
 </details>
 
-Can't find the answers you are looking for? Try out [Slack](https://join.slack.com/t/continuous-feedback/shared\_invite/zt-1hk5rbjow-yXOIxyyYOLSXpCZ4RXstgA) channel.
+Can't find the answers you are looking for?  Try out [Slack](https://join.slack.com/t/continuous-feedback/shared\_invite/zt-1hk5rbjow-yXOIxyyYOLSXpCZ4RXstgA) channel.

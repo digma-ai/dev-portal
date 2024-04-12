@@ -7,6 +7,4 @@ description: >-
 
 # Top Usage
 
-
-
 <figure><img src="../../.gitbook/assets/Top Usage - illustration.svg" alt=""><figcaption></figcaption></figure>

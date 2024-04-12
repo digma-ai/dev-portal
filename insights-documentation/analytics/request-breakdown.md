@@ -11,5 +11,3 @@ description: The request
 ### Asynchronous requests breakdown
 
 <figure><img src="../../.gitbook/assets/Request Breakdown - illustration (3).svg" alt=""><figcaption></figcaption></figure>
-
-###

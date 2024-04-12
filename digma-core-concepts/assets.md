@@ -6,11 +6,11 @@ description: >-
 
 # Assets
 
-Asset categories include HTTP Endpoints, code locations, consumers, database queries, and more. In most cases, an asset correlates to a [Span](https://opentelemetry.io/docs/concepts/signals/traces/#spans) that has been categorized and processed in a specific way.&#x20;
+Asset categories include HTTP Endpoints, code locations, consumers, database queries, and more. In most cases, an asset correlates to a [Span](https://opentelemetry.io/docs/concepts/signals/traces/#spans) that has been categorized and processed in a specific way.
 
 <figure><img src="../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-Another reason for categorizing spans into assets is to be able to better compare them. There is no sense in comparing an endpoint to a database query, for example. In each category, it is possible to sort the assets based on duration, performance impact, errors, and other criteria.&#x20;
+Another reason for categorizing spans into assets is to be able to better compare them. There is no sense in comparing an endpoint to a database query, for example. In each category, it is possible to sort the assets based on duration, performance impact, errors, and other criteria.
 
 ## Asset Naming and Uniqueness
 
@@ -25,15 +25,8 @@ Here are some examples:
 | Database    | SELECT \<DBNAME> for example: `SELECT 37b32f66-7a82-45f3-9d47-dc1d89b49ec7` | `SELECT 37b32f66-7a82-45f3-9d47-dc1d89b49ec7`   | Analyzes query syntax and generates a hash based query skeleton (without the parameters). | `select v1_0.pet_id,v1_0.id,v1_0.visit_date,v1_0.description from visits v1_0 where v1_0.pet_id=? order by v1_0.visit_date` |
 | HTTP Client | HTTP \<VERB>                                                                | `HTTP GET`                                      | Either HTTP \<VERB> \<Target Microservice Route> or HTTP \<VERB> \<Target Domain>           | `HTTP GET /users_service/{userId}`                                                                                          |
 
-
-
 ### Reviewing assets for your application or for specific APIs
 
-The Digma Assets tab provides an overview of all recorded assets which were discovered in the traces. You can quickly search or filter to specific services or endpoints, and sort by duration, critical insights, and even [performance impact.](performance-impact.md)&#x20;
+The Digma Assets tab provides an overview of all recorded assets which were discovered in the traces. You can quickly search or filter to specific services or endpoints, and sort by duration, critical insights, and even [performance impact.](performance-impact.md)
 
 <figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
-
-
-
-
-

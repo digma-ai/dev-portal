@@ -7,17 +7,11 @@ description: >-
 
 # Spring, Spring Boot, Dropwizard, and default
 
-
-
 <div align="left">
 
 <figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt="" width="113"><figcaption></figcaption></figure>
 
- 
-
 <figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt="" width="123"><figcaption></figcaption></figure>
-
- 
 
 <figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt="" width="188"><figcaption></figcaption></figure>
 

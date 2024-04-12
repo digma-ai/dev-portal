@@ -9,9 +9,9 @@ description: >-
 
 ### Learn of code-related issues, from multiple environments
 
-As the code gets executed, either in your local environment, in CI staging, or in production - Digma learns about how it performs, scales, and identifies any process issues or anti-patterns that should be dealt with.&#x20;
+As the code gets executed, either in your local environment, in CI staging, or in production - Digma learns about how it performs, scales, and identifies any process issues or anti-patterns that should be dealt with.
 
-As you work on your code, any newly detected issues will appear in the issues side panel as `unread`.&#x20;
+As you work on your code, any newly detected issues will appear in the issues side panel as `unread`.
 
 <figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 

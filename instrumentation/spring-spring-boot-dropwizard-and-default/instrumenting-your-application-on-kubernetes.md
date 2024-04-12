@@ -4,36 +4,40 @@
 
 If your application is running on Kubernetes you can easily instrument it using Digma without changing the original Helm chart/YAML files. We recommend using [Kustomize](https://kustomize.io/) for ease of use.
 
-1. Install [Kustimize](https://kubectl.docs.kubernetes.io/installation/kustomize/).&#x20;
-2. Clone or download our [helper](https://github.com/digma-ai/digma-helm-helper) repo&#x20;
+1. Install [Kustimize](https://kubectl.docs.kubernetes.io/installation/kustomize/).
+2. Clone or download our [helper](https://github.com/digma-ai/digma-helm-helper) repo
 3. Make sure the scripts have execution permission
 
-```
-sudo chmod +x ./kustomize/kustomize_build.sh
-sudo chmod +x ./kustomize/create_customization.sh
-```
+    ```
+    sudo chmod +x ./kustomize/kustomize_build.sh
+    sudo chmod +x ./kustomize/create_customization.sh
+    ```
 
-4. Run the `create_customization.sh` script. You'll need to pass it some parameters based on the application and the Digma `collector-api` IP/DNS address (read more [here](../../installation/central-on-prem-install.md)). Once you run this command, the helper scripts will generate a patch that can be applied with your Helm file to instrument the application. &#x20;
+4. Run the `create_customization.sh` script. You'll need to pass it some parameters based on the application and the Digma `collector-api` IP/DNS address (read more [here](../../installation/central-on-prem-install.md)). Once you run this command, the helper scripts will generate a patch that can be applied with your Helm file to instrument the application.
 
-{% code overflow="wrap" %}
-```bash
-[PATH_TO_HELPER_REPO_ROOT]/kustomize/create_kustomization.sh [DIGMA_COLLECTOR_URL] [SERVICE_NAME] [ENVIRONMENT_NAME] [LABEL_TARGET_SELECTOR]
-```
-{% endcode %}
+    {% code overflow="wrap" %}
 
-* `PATH_TO_HELPER_REPO_ROOT`: The location where you cloned the helper repo to
-* `DIGMA_COLLECTOR_URL`: The URL of the Digma collector endpoint and port. For example: `http://internal.collector.dns:5050`
-* `ENVIRONMENT_NAME`: The Digma [Environment](../../digma-core-concepts/environments.md) that will be associated with this application deployment observability (e.g. `TEST`, `PERF_TESTS`, `STAGING`)
-* `LABEL_TARGET_SELECTOR`: These are selectors used to select which application to apply the instrumentation [patch](https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/patches/) on.&#x20;
+    ```bash
+    [PATH_TO_HELPER_REPO_ROOT]/kustomize/create_kustomization.sh [DIGMA_COLLECTOR_URL] [SERVICE_NAME] [ENVIRONMENT_NAME] [LABEL_TARGET_SELECTOR]
+    ```
 
-Following the last step, you should have two generated files in your local directory: `patch.yaml` and `kustomization.yaml` these will be used to patch in the instrumentation logic when you run the Helm file in the next step.
+    {% endcode %}
+
+    * `PATH_TO_HELPER_REPO_ROOT`: The location where you cloned the helper repo to
+    * `DIGMA_COLLECTOR_URL`: The URL of the Digma collector endpoint and port. For example: `http://internal.collector.dns:5050`
+    * `ENVIRONMENT_NAME`: The Digma [Environment](../../digma-core-concepts/environments.md) that will be associated with this application deployment observability (e.g. `TEST`, `PERF_TESTS`, `STAGING`)
+    * `LABEL_TARGET_SELECTOR`: These are selectors used to select which application to apply the instrumentation [patch](https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/patches/) on.
+
+    Following the last step, you should have two generated files in your local directory: `patch.yaml` and `kustomization.yaml` these will be used to patch in the instrumentation logic when you run the Helm file in the next step.
 
 5. Finally, run your helm file with an additional `--post-renderer` argument
 
 {% code overflow="wrap" %}
+
 ```bash
-helm install [NAME] [PATH_TO_HELM_CHART] -n [NAMESPACE} --post-renderer [PATH_TO_HELPER_REPO_ROOT]/kustomize/kustomize_build.sh 
+helm install [NAME] [PATH_TO_HELM_CHART] -n [NAMESPACE} --post-renderer [PATH_TO_HELPER_REPO_ROOT]/kustomize/kustomize_build.sh
 ```
+
 {% endcode %}
 
 ### Updating the Helm file manually
@@ -65,10 +69,10 @@ spec:
       containers:
       - name: pet-clinic
         image: springio/petclinic:latest
-#--------------------------------------------- 
+#---------------------------------------------
 # add instrumentation logic
         env:
-        - name: JAVA_TOOL_OPTIONS 
+        - name: JAVA_TOOL_OPTIONS
           value: -javaagent:/shared-vol/otel-agent.jar -Dotel.javaagent.extensions=/shared-vol/digma-ext.jar -Dotel.exporter.otlp.traces.endpoint=http://meloona-digma-collector-api.meloona.svc.cluster.local:5050 -Dotel.traces.exporter=otlp -Dotel.metrics.exporter=none -Dotel.logs.exporter=none -Dotel.exporter.otlp.protocol=grpc -Dotel.instrumentation.common.experimental.controller.telemetry.enabled=true -Dotel.instrumentation.common.experimental.view.telemetry.enabled=true -Dotel.instrumentation.experimental.span-suppression-strategy=none -Dotel.service.name=spring-petclinic
         - name: OTEL_RESOURCE_ATTRIBUTES
           value: digma.environment=PETCLINIC
@@ -87,9 +91,7 @@ spec:
       volumes:
       - name: shared
         emptyDir: {}
-#--------------------------------------------- 
----
-
+#---------------------------------------------
 apiVersion: v1
 kind: Service
 metadata:

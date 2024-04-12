@@ -11,6 +11,3 @@ description: >-
 ### Description
 
 This query has been found to be especially slow compared to other queries of the same type running against the same DB. Consider optimizing this query or caching it.
-
-
-

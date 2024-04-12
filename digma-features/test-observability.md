@@ -18,7 +18,6 @@ When you run your integration or end-to-end tests in the IDE, Digma will automat
 
 ### Connecting your CI tests with Digma
 
-Follow the instructions for instrumenting your app in CI as documented [here](../instrumentation/spring-spring-boot-dropwizard-and-default/instrumenting-your-code-in-ci-staging-or-the-terminal.md).&#x20;
+Follow the instructions for instrumenting your app in CI as documented [here](../instrumentation/spring-spring-boot-dropwizard-and-default/instrumenting-your-code-in-ci-staging-or-the-terminal.md).
 
-You should create unique [environments](../digma-core-concepts/environments.md) for different test types, to avoid data anomalies and maintain consistency in the analytics.&#x20;
-
+You should create unique [environments](../digma-core-concepts/environments.md) for different test types, to avoid data anomalies and maintain consistency in the analytics.

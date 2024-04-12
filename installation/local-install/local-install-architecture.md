@@ -16,4 +16,3 @@ The following are the default ports used by Digma:
 * `5050` is used to collect observability data. This will use the OTEL standard so can accept traces from any OTLP exporter.
 * `5051` is used as a backend API for the plugin. The plugin uses it to retrieve and render the insights and processed data
 * `17686` is the default embedded Jaeger port. This is used to render the visualization for traces including code location data.
-

@@ -12,15 +12,6 @@ Clicking the link will add the needed dependencies to your `pom.xml` or `build.g
 
 Once the dependencies have been added, you'll be able to use the Digma observability toggle to turn tracing on and off. Similar to other frameworks, the project Run Configuration will be modified in runtime to include the necessary system properties to send tracing data to the Digma Analytics Engine.
 
-
-
 ### Micronaut, OpenLiberty
 
 TBD
-
-
-
-###
-
-
-

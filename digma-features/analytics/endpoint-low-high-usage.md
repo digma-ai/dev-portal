@@ -6,6 +6,4 @@ description: >-
 
 # Endpoint Low/High Usage
 
-
-
 <figure><img src="../../.gitbook/assets/Endpoint High Traffic - illustration.svg" alt=""><figcaption></figcaption></figure>
