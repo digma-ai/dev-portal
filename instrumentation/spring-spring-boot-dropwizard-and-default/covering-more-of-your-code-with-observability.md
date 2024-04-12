@@ -30,3 +30,8 @@ Digma is unrolling a new feature to allow developers to automatically instrument
 To enable `Extended Observability` open the Digma plugin settings page and type in the name of your application package under the `Extended Observability (beta)` property.
 
 <figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+
+To set the same values from the terminal line you should set the following environment variable:
+
+`export DIGMA_AUTOINSTRUMENT_PACKAGES=my.package.com`
+
