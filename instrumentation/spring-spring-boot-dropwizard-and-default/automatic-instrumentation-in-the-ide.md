@@ -6,7 +6,7 @@ To get started, make sure that that `Observability` toggle is set to on. You can
 
 <figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
-By default, when you enable the observability toggle, Digma will download and add the OTEL Java Agent and dynamically add it to your runtime configuration when you launch your application in the IDE. In addition,  the Digma Agent extension is also downloaded and referenced to add additional instrumentation data.&#x20;
+By default, when you enable the observability toggle, Digma will download and add the OTEL Java Agent and dynamically add it to your runtime configuration when you launch your application in the IDE. In addition, the Digma Agent extension is also downloaded and referenced to add additional instrumentation data.&#x20;
 
 ### How to tell if your code is automatically instrumented with the Java Agent
 

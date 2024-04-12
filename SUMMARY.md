@@ -41,7 +41,7 @@
   * [Excessive API calls (chatty API)](insights-documentation/insights/excessive-api-calls-chatty-api.md)
   * [Bottleneck](insights-documentation/insights/bottleneck.md)
   * [Scaling Issue](insights-documentation/insights/scaling-issue.md)
-  * [Session In View Query  Detected](insights-documentation/insights/session-in-view-query-detected.md)
+  * [Session In View Query Detected](insights-documentation/insights/session-in-view-query-detected.md)
   * [Query Optimization Suggested](insights-documentation/insights/query-optimization-suggested.md)
   * [High number of queries](insights-documentation/insights/high-number-of-queries.md)
   * [Slow Endpoint](digma-features/issues/slow-endpoint.md)

@@ -24,7 +24,7 @@ You should pay attention to the following regarding the deployment architecture:
 
 Prerequisites:&#x20;
 
-* Access to a  [Kubernetes](https://kubernetes.io/) cluster&#x20;
+* Access to a [Kubernetes](https://kubernetes.io/) cluster&#x20;
 * [Helm](https://helm.sh/docs/intro/install/) installed locally
 * [Create a free Digma Account](https://digma.ai/sign-up) and receive back a license token
 
@@ -53,7 +53,7 @@ helm install digma digma/digma --set digma.licenseKey=[DIGMA_LICENSE] --namespac
 
 * `size` (small | medium | large) - The cluster can be deployed in multiple scales, depending on the expected load. The default sizing is `medium`. If you select a size that is too small to handle the number of spans per second, you'll get a message from the Digma plugin prompting you to upgrade to a bigger size.
 * `digmaAnalytics.accesstoken`(any string): This is a unique key you’ll need to provide any IDE that connects to this Digma instance, you can choose any token you'd like.&#x20;
-* `embeddedJaeger.enabled`  (true/false) – Setting this to False will not expose the port for the Jaeger instance included with Digma. If you’re using your own APM and want to link to that instead, you can leave that at the default value (false)
+* `embeddedJaeger.enabled` (true/false) – Setting this to False will not expose the port for the Jaeger instance included with Digma. If you’re using your own APM and want to link to that instead, you can leave that at the default value (false)
 
 ### **Cloud Deployment**
 

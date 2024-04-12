@@ -21,5 +21,5 @@ There could be multiple reasons for this. There are several things to check in s
 
 
 
-Can't find the answers you are looking for?  Try out [Slack](https://join.slack.com/t/continuous-feedback/shared\_invite/zt-1hk5rbjow-yXOIxyyYOLSXpCZ4RXstgA) channel.
+Can't find the answers you are looking for? Try out [Slack](https://join.slack.com/t/continuous-feedback/shared\_invite/zt-1hk5rbjow-yXOIxyyYOLSXpCZ4RXstgA) channel.
 

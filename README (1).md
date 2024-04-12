@@ -10,7 +10,7 @@ description: >-
 
 1. [IntelliJ](https://www.jetbrains.com/idea/) Community or Ultimate Edition (2022.3 and up are supported, though latest is recommended)
 2. An application running [Java](https://www.java.com/en/) or [Kotlin](https://kotlinlang.org/) code
-3. Docker installed and running - Can be either [Docker Desktop](https://www.docker.com/products/docker-desktop/), [Podman](https://podman.io/),  [Rancher Desktop](https://rancherdesktop.io/) or [Colima](https://www.google.com/search?q=colima\&rlz=1C5CHFA\_enUS977US977\&oq=Colima\&gs\_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyBggCEEUYOzIHCAMQABiPAjIGCAQQRRg7MgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEIMTUwM2owajSoAgCwAgE\&sourceid=chrome\&ie=UTF-8)&#x20;
+3. Docker installed and running - Can be either [Docker Desktop](https://www.docker.com/products/docker-desktop/), [Podman](https://podman.io/), [Rancher Desktop](https://rancherdesktop.io/) or [Colima](https://www.google.com/search?q=colima\&rlz=1C5CHFA\_enUS977US977\&oq=Colima\&gs\_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyBggCEEUYOzIHCAMQABiPAjIGCAQQRRg7MgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEIMTUwM2owajSoAgCwAgE\&sourceid=chrome\&ie=UTF-8)&#x20;
 
 <details>
 
@@ -32,19 +32,19 @@ The Digma Plugin is available on the IntelliJ Marketplace.&#x20;
 
 You can install the plugin from your IDE or open the plugin [page](https://plugins.jetbrains.com/plugin/19470-digma-continuous-feedback) in your browser. &#x20;
 
-## 2.  Setup the Digma Analytics Engine
+## 2. Setup the Digma Analytics Engine
 
 Digma runs locally on your machine. To process all of the captured traces, analyze them, detect issues, and provide analytics, Digma relies on Docker containers. When not ingesting any traces, these containers are completely idle.
 
-After the plugin installs you'll get to choose the preferred way to install the Digma Engine.  Several options are available:
+After the plugin installs you'll get to choose the preferred way to install the Digma Engine. Several options are available:
 
 <figure><img src=".gitbook/assets/image (5) (1) (1).png" alt="" width="240"><figcaption></figcaption></figure>
 
 <details>
 
-<summary>Auto install  (Default)</summary>
+<summary>Auto install (Default)</summary>
 
-This is the default option. After installation, the plugin will try to start the Digma Engine containers on your local Docker environment and will offer clear controls to allow you to `Stop` `Start` or `Remove` it.  The benefit of using this approach is that Digma will be able to also update the Engine automatically when a new release becomes available.&#x20;
+This is the default option. After installation, the plugin will try to start the Digma Engine containers on your local Docker environment and will offer clear controls to allow you to `Stop` `Start` or `Remove` it. The benefit of using this approach is that Digma will be able to also update the Engine automatically when a new release becomes available.&#x20;
 
 ![](<.gitbook/assets/image (4) (1) (1) (1).png>)
 

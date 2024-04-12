@@ -4,7 +4,7 @@
 
 Tests can be a great source of observability. The ability to study the application in a controlled experiment, changing only the code each time - is a huge opportunity to uncover issues and study how the system behaves.
 
-In practical terms, this means that Digma creates a two-way mapping between the test of each asset - database query, endpoint, code location, or consumer.  From the test level, you can identify issues and study system analytics under the test environment.
+In practical terms, this means that Digma creates a two-way mapping between the test of each asset - database query, endpoint, code location, or consumer. From the test level, you can identify issues and study system analytics under the test environment.
 
 <figure><img src="../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 

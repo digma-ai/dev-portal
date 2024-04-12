@@ -14,7 +14,7 @@ Note: If you're using the Micrometer Tracing observability strategy in Digma, cl
 
 Sometimes you may wish to include additional data in the trace, such as parameters, results, counters, or any other data that may later be useful when reviewing the trace.&#x20;
 
-OpenTelemetry provides an easy way to accomplish that using Span attributes.  The following code illustrates how to add any value to the trace.
+OpenTelemetry provides an easy way to accomplish that using Span attributes. The following code illustrates how to add any value to the trace.
 
 ```java
 Span span = Span.current();

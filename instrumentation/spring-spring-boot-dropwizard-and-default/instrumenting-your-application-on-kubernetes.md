@@ -2,7 +2,7 @@
 
 ### Using Helm and Kustomize
 
-If your application is running on Kubernetes you can easily instrument it using Digma without changing the original Helm chart/YAML files.  We recommend using [Kustomize](https://kustomize.io/) for ease of use.
+If your application is running on Kubernetes you can easily instrument it using Digma without changing the original Helm chart/YAML files. We recommend using [Kustomize](https://kustomize.io/) for ease of use.
 
 1. Install [Kustimize](https://kubectl.docs.kubernetes.io/installation/kustomize/).&#x20;
 2. Clone or download our [helper](https://github.com/digma-ai/digma-helm-helper) repo&#x20;
@@ -13,7 +13,7 @@ sudo chmod +x ./kustomize/kustomize_build.sh
 sudo chmod +x ./kustomize/create_customization.sh
 ```
 
-4. Run the `create_customization.sh` script. You'll need to pass it some parameters based on the application  and the Digma `collector-api` IP/DNS address (read more [here](../../installation/central-on-prem-install.md)). Once you run this command, the helper scripts will generate a patch that can be applied with your Helm file to instrument the application. &#x20;
+4. Run the `create_customization.sh` script. You'll need to pass it some parameters based on the application and the Digma `collector-api` IP/DNS address (read more [here](../../installation/central-on-prem-install.md)). Once you run this command, the helper scripts will generate a patch that can be applied with your Helm file to instrument the application. &#x20;
 
 {% code overflow="wrap" %}
 ```bash
@@ -28,7 +28,7 @@ sudo chmod +x ./kustomize/create_customization.sh
 
 Following the last step, you should have two generated files in your local directory: `patch.yaml` and `kustomization.yaml` these will be used to patch in the instrumentation logic when you run the Helm file in the next step.
 
-5. Finally, run your helm file with an additional  `--post-renderer` argument
+5. Finally, run your helm file with an additional `--post-renderer` argument
 
 {% code overflow="wrap" %}
 ```bash

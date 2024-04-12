@@ -1,6 +1,6 @@
 # Performance Impact
 
-Performance impact is a unique Digma feature that is only measured in real-world-like scenarios such as end-to-end testing and staging environments.  Therefore, this feature is only activated once you install Digma in a [central environment.](../installation/central-on-prem-install.md)&#x20;
+Performance impact is a unique Digma feature that is only measured in real-world-like scenarios such as end-to-end testing and staging environments. Therefore, this feature is only activated once you install Digma in a [central environment.](../installation/central-on-prem-install.md)&#x20;
 
 ### What is a performance impact?
 

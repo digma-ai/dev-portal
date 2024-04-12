@@ -14,7 +14,7 @@ Another reason for categorizing spans into assets is to be able to better compar
 
 ## Asset Naming and Uniqueness
 
-Assets are assigned unique names based on their role and attributes that are often different from the default Span name.  This is a prerequisite to being able to group and aggregate data about them.  This is why there isn't really a one to one mapping between spans and assets. another way to think about it is that a span is instanced in each trace while a Digma asset is extracted for multiple traces
+Assets are assigned unique names based on their role and attributes that are often different from the default Span name. This is a prerequisite to being able to group and aggregate data about them. This is why there isn't really a one to one mapping between spans and assets. another way to think about it is that a span is instanced in each trace while a Digma asset is extracted for multiple traces
 
 Consider the following OTEL naming strategies vs. the name Digma assigned after some pre-processing.
 
@@ -22,7 +22,7 @@ Here are some examples:
 
 | Span Type   | OTEL Naming                                                                 | OTEL Example                                    | Digma Naming                                                                                | Digma Example                                                                                                               |
 | ----------- | --------------------------------------------------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Database    | SELECT \<DBNAME> for example: `SELECT 37b32f66-7a82-45f3-9d47-dc1d89b49ec7` | `SELECT 37b32f66-7a82-45f3-9d47-dc1d89b49ec7`   | Analyzes query syntax and generates a hash based query skeleton (without the parameters) .  | `select v1_0.pet_id,v1_0.id,v1_0.visit_date,v1_0.description from visits v1_0 where v1_0.pet_id=? order by v1_0.visit_date` |
+| Database    | SELECT \<DBNAME> for example: `SELECT 37b32f66-7a82-45f3-9d47-dc1d89b49ec7` | `SELECT 37b32f66-7a82-45f3-9d47-dc1d89b49ec7`   | Analyzes query syntax and generates a hash based query skeleton (without the parameters). | `select v1_0.pet_id,v1_0.id,v1_0.visit_date,v1_0.description from visits v1_0 where v1_0.pet_id=? order by v1_0.visit_date` |
 | HTTP Client | HTTP \<VERB>                                                                | `HTTP GET`                                      | Either HTTP \<VERB> \<Target Microservice Route> or HTTP \<VERB> \<Target Domain>           | `HTTP GET /users_service/{userId}`                                                                                          |
 
 

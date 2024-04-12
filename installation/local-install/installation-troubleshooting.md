@@ -23,7 +23,7 @@ To change the default Digma API or Jaeger ports simply add the below:
       - "[NEW_API_PORT]:5051"
 ```
 
-If you need to change the default collector port (:5050),  the change also requires an additional step of setting an environment variable as follows:
+If you need to change the default collector port (:5050), the change also requires an additional step of setting an environment variable as follows:
 
 ```
   digma-compound:
@@ -57,4 +57,4 @@ This is often related to memory limits related to the resources assigned to your
 
 </details>
 
-Can't find the answers you are looking for?  Try out [Slack](https://join.slack.com/t/continuous-feedback/shared\_invite/zt-1hk5rbjow-yXOIxyyYOLSXpCZ4RXstgA) channel.
+Can't find the answers you are looking for? Try out [Slack](https://join.slack.com/t/continuous-feedback/shared\_invite/zt-1hk5rbjow-yXOIxyyYOLSXpCZ4RXstgA) channel.

@@ -5,7 +5,7 @@ description: >-
   at the rendering phase.
 ---
 
-# Session In View Query  Detected
+# Session In View Query Detected
 
 <figure><img src="../../.gitbook/assets/Session in View Query Detected - illustration.svg" alt=""><figcaption></figcaption></figure>
 

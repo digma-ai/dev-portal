@@ -1,6 +1,6 @@
 ---
 description: >-
-  This insight identifies queries that are abnormally  slow and are considered
+  This insight identifies queries that are abnormally slow and are considered
   candidates for optimization
 ---
 

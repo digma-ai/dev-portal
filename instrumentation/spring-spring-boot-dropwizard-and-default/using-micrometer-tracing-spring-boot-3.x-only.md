@@ -2,7 +2,7 @@
 
 
 
-Instead of using the OTEL agent, Digma can leverage Micrometer Tracing to collect information about your Spring application. You can select the Micrometer Tracing strategy from the Digma plugin settings page.  Open the IntelliJ settings screen and search for `Digma` to bring up the plugin options, then select `Micrometer` from the `Spring boot observability mode` dropdown.
+Instead of using the OTEL agent, Digma can leverage Micrometer Tracing to collect information about your Spring application. You can select the Micrometer Tracing strategy from the Digma plugin settings page. Open the IntelliJ settings screen and search for `Digma` to bring up the plugin options, then select `Micrometer` from the `Spring boot observability mode` dropdown.
 
 <figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
