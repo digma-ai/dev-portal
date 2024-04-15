@@ -4,22 +4,17 @@ The most straightforward way to instrument your application is simply to downloa
 
 You can use this simple script from the terminal:
 
-{% code overflow="wrap" lineNumbers="true" fullWidth="false" %}
+<pre class="language-bash" data-overflow="wrap" data-line-numbers data-full-width="false"><code class="lang-bash">curl --create-dirs -O -L --output-dir /tmp/otel https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v2.1.0/opentelemetry-javaagent.jar 
 
-```bash
-curl --create-dirs -O -L --output-dir /tmp/otel https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v2.1.0/opentelemetry-javaagent.jar
-
-curl --create-dirs -O -L --output-dir /tmp/otel https://github.com/digma-ai/otel-java-instrumentation/releases/latest/download/digma-otel-agent-extension.jar
-
+<strong>curl --create-dirs -O -L --output-dir /tmp/otel https://github.com/digma-ai/otel-java-instrumentation/releases/latest/download/digma-otel-agent-extension.jar
+</strong>
 export JAVA_TOOL_OPTIONS="-javaagent:/tmp/otel/opentelemetry-javaagent.jar -Dotel.exporter.otlp.endpoint=[DIGMA_URL] -Dotel.javaagent.extensions=/tmp/otel/digma-otel-agent-extension.jar -Dotel.metrics.exporter=none -Dotel.logs.exporter=none -Dotel.exporter.otlp.protocol=grpc"
 
 export OTEL_SERVICE_NAME=[SERVICE_NAME]
 export OTEL_RESOURCE_ATTRIBUTES=digma.environment=[ENVIRONMENT_NAME]
 
 java app.jar
-```
-
-{% endcode %}
+</code></pre>
 
 Substitute the following values:
 
@@ -44,4 +39,4 @@ export OTEL_RESOURCE_ATTRIBUTES=digma.environment=[ENVIRONMENT_NAME],scm.commit.
 
 This information will be used when identifying issues. For example, here is the ticket information for a specific issue found by Digma:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>

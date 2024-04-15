@@ -6,7 +6,7 @@ If you're using Quarkus then the recommended way to enable tracing is not via th
 
 Once you've loaded a project that contains Quarkus modules, the Digma plugin will automatically pick up on that, and within a few seconds present you with an option to configure the dependencies for you.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Clicking the link will add the needed dependencies to your `pom.xml` or `build.gradle` files.
 
