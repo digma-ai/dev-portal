@@ -1,6 +1,6 @@
 ---
 description: >-
-  The default strategy for geting observability data from your code to Digma
+  The default strategy for getting observability data from your code to Digma
   doesn't require any code changes. This also works for other esoteric
   frameworks or just vanilla Java code
 ---

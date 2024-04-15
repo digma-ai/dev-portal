@@ -35,7 +35,7 @@ If you need to change the default collector port (:5050),  the change also requi
       - Collector.Endpoints__Default__Port=NEW_COLLECTOR_PORT    
 ```
 
-Finally, update the new ports in the plugin settings page which you can access via the IntellIJ settings page:
+Finally, update the new ports in the plugin settings page which you can access via the IntelliJ settings page:
 
 <img src="../../.gitbook/assets/image (24) (1).png" alt="" data-size="original">
 

@@ -2,7 +2,7 @@
 
 The easiest way to get started with Digma is to use the Digma plugin to automatically instrument your application when you run it in the IDE.
 
-To get started, make sure that that `Obervability` toggle is set to on. You can always use this control to turn auto-instrumentation on and off.
+To get started, make sure that that `Observability` toggle is set to on. You can always use this control to turn auto-instrumentation on and off.
 
 <figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 

@@ -6,7 +6,7 @@
 
 There could be multiple reasons for this. There are several things to check in such a scenario:
 
-* When running your process, do you see an additional message indicating the code is being instrumented? You should either see a `This process is enhaced by Digma` message or some message listing injected observability properties.
+* When running your process, do you see an additional message indicating the code is being instrumented? You should either see a `This process is enhanced by Digma` message or some message listing injected observability properties.
 * If you're using a custom Gradle/Maven task, Digma might not be picking it up. Give Digma a hint by adding the following environment variable to your run config: `DIGMA_OBSERVABILITY=true`
 * Perhaps there is a mismatch between the instrumentation strategy Digma has selected and the one your framework requires. You can override the Digma inferred strategy by adding the `INSTRUMENTATION_FLAVOR` environment variable to your runtime configuration. Valid values are: `Default`, `Quarkus,``Micronaut`, `SpringBootMicrometer`, `OpenLiberty`, `JavaServer`
 * Make sure your code is generating observability. While most server frameworks (like Spring or Dropwizard) do, others do not. To make sure, add a @WithSpan(kind=Spankind.Server) annotation above your root function. Then check again if that is being picked up by Digma.
