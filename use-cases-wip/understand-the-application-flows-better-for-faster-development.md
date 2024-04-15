@@ -28,7 +28,7 @@ You can navigate the [assets](../digma-core-concepts/assets.md) tree or take an 
 
 ### Find dead code
 
-Any code that is not triggered will have the `Never reached` code lens attached to it. This is a good way to detect dead code that might be acnadidate for removal.
+Any code that is not triggered will have the `Never reached` code lens attached to it. This is a good way to detect dead code that might be a candidate for removal.
 
 <figure><img src="../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
 
