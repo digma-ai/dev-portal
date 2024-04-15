@@ -6,7 +6,7 @@ Beyond simply identifying issues. Digma also analyzes their effect on the applic
 
 Each issue is assessed for criticality based on its overall effect on the application. In local environments, this is merely measured by the severity of the issue and the scope of different application flows affected by it. In shared environments such as CI, staging, or production, however, actual usage is also measured to determine the true impact of the issue.&#x20;
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 The criticality of each issue is reflected by the color coding of the issue icon. Hovering over the icon will also reveal the criticality score. When reviewing the overall issue list, you can choose to sort by latest or by the most critical issues to help prioritize the backlog and avoid micro-optimizations:
 
