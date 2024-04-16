@@ -19,6 +19,7 @@
   * [Instrumenting your application in Docker Compose](instrumentation/spring-spring-boot-dropwizard-and-default/instrumenting-your-application-in-docker-compose.md)
   * [Instrumenting your application on Kubernetes](instrumentation/spring-spring-boot-dropwizard-and-default/instrumenting-your-application-on-kubernetes.md)
   * [Covering more of your code with Observability](instrumentation/spring-spring-boot-dropwizard-and-default/covering-more-of-your-code-with-observability.md)
+  * [Using GitHub Actions (beta)](instrumentation/spring-spring-boot-dropwizard-and-default/using-github-actions-beta.md)
 * [Quarkus, Micronaut, OpenLiberty](instrumentation/automatic-instrumentation-in-the-ide/quarkus-micronaut.md)
 * [Instrumentation Troubleshooting](instrumentation/instrumentation-troubleshooting.md)
 
@@ -42,7 +43,7 @@
   * [Excessive API calls (chatty API)](insights-documentation/insights/excessive-api-calls-chatty-api.md)
   * [Bottleneck](insights-documentation/insights/bottleneck.md)
   * [Scaling Issue](insights-documentation/insights/scaling-issue.md)
-  * [Session In View Query  Detected](insights-documentation/insights/session-in-view-query-detected.md)
+  * [Session In View Query Detected](insights-documentation/insights/session-in-view-query-detected.md)
   * [Query Optimization Suggested](insights-documentation/insights/query-optimization-suggested.md)
   * [High number of queries](insights-documentation/insights/high-number-of-queries.md)
   * [Slow Endpoint](digma-features/issues/slow-endpoint.md)
