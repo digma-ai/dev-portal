@@ -37,7 +37,6 @@
 
 ## Digma Features
 
-* [Digma overload](digma-features/digma-overload.md)
 * [Issues](insights-documentation/insights/README.md)
   * [Suspected N+1](insights-documentation/insights/suspected-n+1.md)
   * [Excessive API calls (chatty API)](insights-documentation/insights/excessive-api-calls-chatty-api.md)
