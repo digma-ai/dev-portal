@@ -17,10 +17,10 @@ As you work on your code, any newly detected issues will appear in the issues si
 
 Additionally, the code itself will be highlighted to signify whether any critical issues are present:
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Recheck issues after fixing the source problems
 
 Once an issue Digma detected is fixed, you can use the `recheck` option on the issue card. Digma will start re-examining the problem based on new data to determine whether the issue is indeed fixed.  This is not mandatory for detecting whether an issue is fixed but can expedite the detection process.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
