@@ -10,7 +10,7 @@ You can find the Digma Plugin in the IntelliJ Plugin Marketplace in your IDE by 
 
 Installing the plugin will also kick off the Digma Local Engine installation. If you have Docker installed and running on your machine that should happen automatically! You can also run Digma yourself using a simple Docker Compose file. See [README (1).md](<README (1).md> "mention")for more info.
 
-### Step 2 -  Success! Just Run your Code&#x20;
+### Step 2 -  Just Run your Code&#x20;
 
 Actually, that's it!  The Digma plugin will take care of adding the instrumentation to your code, you can control this behavior with a simple toggle:
 
