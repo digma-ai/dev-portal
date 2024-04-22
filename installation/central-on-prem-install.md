@@ -9,8 +9,7 @@ description: >-
 
 ### Understanding the Deployment Architecture
 
-Digma is deployed into the K8s cluster into its own namespace. Depending on your application deployment architecture you may want to deploy Digma with different parameters to enable the right connectivity.\
-
+Digma is deployed into the K8s cluster into its own namespace. Depending on your application deployment architecture you may want to deploy Digma with different parameters to enable the right connectivity.\\
 
 <figure><img src="../.gitbook/assets/deployment_arch.png" alt="" width="375"><figcaption></figcaption></figure>
 
@@ -22,9 +21,9 @@ You should pay attention to the following regarding the deployment architecture:
 
 ### Deploying the Digma backend <a href="#deployment" id="deployment"></a>
 
-Prerequisites:&#x20;
+Prerequisites:
 
-* Access to a  [Kubernetes](https://kubernetes.io/) cluster&#x20;
+* Access to a [Kubernetes](https://kubernetes.io/) cluster
 * [Helm](https://helm.sh/docs/intro/install/) installed locally
 * [Create a free Digma Account](https://digma.ai/sign-up) and receive back a license token
 
@@ -52,8 +51,8 @@ helm install digma digma/digma --set digma.licenseKey=[DIGMA_LICENSE] --namespac
 **Other optional parameters:**
 
 * `size` (small | medium | large) - The cluster can be deployed in multiple scales, depending on the expected load. The default sizing is `medium`. If you select a size that is too small to handle the number of spans per second, you'll get a message from the Digma plugin prompting you to upgrade to a bigger size.
-* `digmaAnalytics.accesstoken`(any string): This is a unique key you’ll need to provide any IDE that connects to this Digma instance, you can choose any token you'd like.&#x20;
-* `embeddedJaeger.enabled`  (true/false) – Setting this to False will not expose the port for the Jaeger instance included with Digma. If you’re using your own APM and want to link to that instead, you can leave that at the default value (false)
+* `digmaAnalytics.accesstoken`(any string): This is a unique key you’ll need to provide any IDE that connects to this Digma instance, you can choose any token you'd like.
+* `embeddedJaeger.enabled` (true/false) – Setting this to False will not expose the port for the Jaeger instance included with Digma. If you’re using your own APM and want to link to that instead, you can leave that at the default value (false)
 
 ### **Cloud Deployment**
 
@@ -63,9 +62,9 @@ helm install digma digma/digma --set digma.licenseKey=[DIGMA_LICENSE] --namespac
 
 <summary>AWS</summary>
 
-Digma can be set up to use either a public or an internal DNS. You should choose the option that better suits your requirements. &#x20;
+Digma can be set up to use either a public or an internal DNS. You should choose the option that better suits your requirements.
 
-#### Internal DNS
+**Internal DNS**
 
 Use the below `values` file to set up your AWS deployment using internal load balancers.
 
@@ -75,7 +74,7 @@ helm install digma digma/digma --values https://raw.githubusercontent.com/digma-
 ```
 {% endcode %}
 
-#### External DNS
+**External DNS**
 
 Use the below `values` file to set up your AWS deployment using external facing load balancers.
 
@@ -91,9 +90,9 @@ helm install digma digma/digma --values https://raw.githubusercontent.com/digma-
 
 <summary>GKE</summary>
 
-#### Internal passthrough
+**Internal passthrough**
 
-Using this value file will set up the GKE deployment using an internal load balancer service&#x20;
+Using this value file will set up the GKE deployment using an internal load balancer service
 
 {% code overflow="wrap" %}
 ```bash
@@ -101,7 +100,7 @@ helm install digma digma/digma --values https://raw.githubusercontent.com/digma-
 ```
 {% endcode %}
 
-#### External DNS
+**External DNS**
 
 If you need to create an external internet-facing load balancer service instead, use the following value file:
 
@@ -121,7 +120,7 @@ To check everything is working properly we can check the pod status and make sur
 
 For example, this is the expected output:
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Step 4: Get the IP/DNS value for the Digma deployment**
 
@@ -150,29 +149,20 @@ curl -k -X ‘GET’ \ ‘https://<ANALYTICS-API>:5051/api/Diagnostic’ \ -H �
 
 If you received a non-error response back you’re good to go for the next step!
 
-### &#x20;Connecting your IDE to the Org Digma deployment
+### Connecting your IDE to the Org Digma deployment
 
 Once Digma is up and running you can now set your IDE plugin to connect to it. To do that, open the plugin settings (Go to IntelliJ IDEA -> Settings/Preferences and search for ‘Digma’)
-
-
 
 <figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
 * Set the `Digma API URL` parameter using the ANALYTICS-API value you’ve captured previously (By default this should be prefixed as ‘https’ and use port 5051)
 * Set the `Runtime observability backend URL` parameter using the ‘COLLECTOR-API’ value you’ve captured previously
-* Set the `Api token` parameter using the string value you used as an access token if you've provided one during setup. &#x20;
+* Set the `Api token` parameter using the string value you used as an access token if you've provided one during setup.
 * Set the `Jaeger Query URL`(if this option was enabled) using the JAEGER address you’ve captured previously.
 
 Click `Apply`/`OK` to enable the changes and check that the Digma UI is not showing any connection errors.
 
-
-
-
+\\
 
 \
-
-
-\
-\
-
-
+\\

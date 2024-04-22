@@ -7,11 +7,9 @@ description: >-
 
 # Spring, Spring Boot, Dropwizard, and default
 
-
-
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt="" width="113"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt="" width="113"><figcaption></figcaption></figure>
 
  
 

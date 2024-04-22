@@ -28,7 +28,7 @@ colima start --memory 3
 
 The Digma Plugin is available on the IntelliJ Marketplace.&#x20;
 
-<figure><img src=".gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 You can install the plugin from your IDE or open the plugin [page](https://plugins.jetbrains.com/plugin/19470-digma-continuous-feedback) in your browser. &#x20;
 
@@ -80,7 +80,7 @@ You can install the Digma Extension from the Docker Marketplace or by visiting t
 
 
 
-<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### How do I know Digma is Running?
 

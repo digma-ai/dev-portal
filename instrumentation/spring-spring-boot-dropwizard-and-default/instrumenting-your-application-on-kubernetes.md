@@ -17,13 +17,13 @@ sudo chmod +x ./kustomize/create_customization.sh
 
 {% code overflow="wrap" %}
 ```bash
-[PATH_TO_HELPER_REPO_ROOT]/kustomize/create_kustomization.sh [DIGMA_COLLECTOR_URL] [SERVICE_NAME] [ENVIRONMENT_NAME] [LABEL_TARGET_SELECTOR]
+[PATH_TO_HELPER_REPO_ROOT]/kustomize/create_kustomization.sh [DIGMA_COLLECTOR_URL] [SERVICE_NAME] [ENVIRONMENT_ID] [LABEL_TARGET_SELECTOR]
 ```
 {% endcode %}
 
 * `PATH_TO_HELPER_REPO_ROOT`: The location where you cloned the helper repo to
 * `DIGMA_COLLECTOR_URL`: The URL of the Digma collector endpoint and port. For example: `http://internal.collector.dns:5050`
-* `ENVIRONMENT_NAME`: The Digma [Environment](../../digma-core-concepts/environments.md) that will be associated with this application deployment observability (e.g. `TEST`, `PERF_TESTS`, `STAGING`)
+* `ENVIRONMENT_ID`: The Digma [Environment](../../digma-core-concepts/environments.md) identifier to associate the observability data for this deployment with.  To retrieve the environment identifier see the instructions on the [environment page](https://docs.digma.ai/digma-developer-guide/digma-core-concepts/environments#retrieving-the-environment-id).&#x20;
 * `LABEL_TARGET_SELECTOR`: These are selectors used to select which application to apply the instrumentation [patch](https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/patches/) on.&#x20;
 
 Following the last step, you should have two generated files in your local directory: `patch.yaml` and `kustomization.yaml` these will be used to patch in the instrumentation logic when you run the Helm file in the next step.

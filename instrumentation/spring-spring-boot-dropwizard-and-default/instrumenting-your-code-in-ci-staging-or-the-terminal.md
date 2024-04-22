@@ -11,7 +11,7 @@ You can use this simple script from the terminal:
 export JAVA_TOOL_OPTIONS="-javaagent:/tmp/otel/opentelemetry-javaagent.jar -Dotel.exporter.otlp.endpoint=[DIGMA_URL] -Dotel.javaagent.extensions=/tmp/otel/digma-otel-agent-extension.jar -Dotel.metrics.exporter=none -Dotel.logs.exporter=none -Dotel.exporter.otlp.protocol=grpc" 
 
 export OTEL_SERVICE_NAME=[SERVICE_NAME]
-export OTEL_RESOURCE_ATTRIBUTES=digma.environment=[ENVIRONMENT_NAME]
+export OTEL_RESOURCE_ATTRIBUTES=digma.environment.id=[ENVIRONMENT_ID]
 
 java app.jar
 </code></pre>
@@ -20,18 +20,18 @@ Substitute the following values:
 
 * Replace `[DIGMA_URL]` with your Digma Collector-API address. If you're running Digma locally this would be http://localhost:5050 by default
 * Make sure to substitute `[SERVICE_NAME]` with your application name:
-* Substitute the `[ENVIRONMENT_NAME]` value based on the environment context in Digma.  You can simply enter `LOCAL` as a default value or create an environment in the Digma UI to see which value to enter here.&#x20;
+* Substitute the `[ENVIRONMENT_ID]` value based on the environment identifier in Digma.  To retrieve the environment identifier see the instructions on the [environment page](https://docs.digma.ai/digma-developer-guide/digma-core-concepts/environments#retrieving-the-environment-id).&#x20;
 
 ### Tracking code changes- Adding Commit hashes to your observability
 
-When new, unexpected or regression issues are detected, it is helpful to be able to track them in you gi history. Adding the commit history to the traces will allow Digma to narrow down which code changes might be responsible to different problems.&#x20;
+When new, unexpected, or regression issues are detected, it is helpful to be able to track them in you gi history. Adding the commit history to the traces will allow Digma to narrow down which code changes might be responsible for different problems.&#x20;
 
-To add the commit identifier to your traces,  set the following Resource Attribute: `scm.commit.id` on the trace. The easiest way to do it is via an environment variable. If you've can access the commit has from your CI, you can add update row `8` above with the new attribute. Here is an example for implementing that in a Github Action:
+To add the commit identifier to your traces,  set the following Resource Attribute: `scm.commit.id` on the trace. The easiest way to do it is via an environment variable. If you can access the commit from your CI, you can add an update row `8` above with the new attribute. Here is an example for implementing that in a Github Action:
 
 {% code overflow="wrap" %}
 ```bash
 git_hash=`git rev-parse --short HEAD`
-export OTEL_RESOURCE_ATTRIBUTES=digma.environment=[ENVIRONMENT_NAME],scm.commit.id=${git_hash}
+export OTEL_RESOURCE_ATTRIBUTES=digma.environment.id=[ENVIRONMENT_ID],scm.commit.id=${git_hash}
 ```
 {% endcode %}
 
@@ -39,7 +39,7 @@ This information will be used when identifying issues. For example, here is the 
 
 
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

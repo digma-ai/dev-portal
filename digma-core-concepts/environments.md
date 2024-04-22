@@ -33,3 +33,9 @@ Private environments are easy to create in your local deployment from the Observ
 
 <figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
+### Retrieving the Environment ID
+
+Each Digma environment has a unique identifier that can be referenced in order to tag observability data to that environment, in whichever way you instrument your code. You can find the environment identifier by selecting the `How to Setup` option from the environment tab in the Observability panel:
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+

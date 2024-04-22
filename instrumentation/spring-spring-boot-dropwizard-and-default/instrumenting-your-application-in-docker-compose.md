@@ -31,12 +31,12 @@ services:
             - OTEL_METRICS_EXPORTER=none
             - OTEL_LOGS_EXPORTER=none
             - OTEL_EXPORTER_OTLP_PROTOCOL=grpc
-            - DEPLOYMENT_ENV=DOCKER_LOCAL 
+            - OTEL_RESOURCE_ATTRIBUTES=digma.environment.id=[ENVIRONMENT_ID]
         extra_hosts:
             - "host.docker.internal:host-gateway"
 </code></pre>
 
-
+To retrieve the environment identifier see the instructions on the [environment page](https://docs.digma.ai/digma-developer-guide/digma-core-concepts/environments#retrieving-the-environment-id). &#x20;
 
 3. Run your original Docker Compose file along with the override file
 
