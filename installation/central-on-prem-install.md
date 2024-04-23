@@ -162,7 +162,3 @@ Once Digma is up and running you can now set your IDE plugin to connect to it. T
 
 Click `Apply`/`OK` to enable the changes and check that the Digma UI is not showing any connection errors.
 
-\\
-
-\
-\\
