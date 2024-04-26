@@ -1,4 +1,4 @@
-# Diagnosing Plugin Issues
+# Reporting Plugin Issues
 
 If you've encountered an issue, you can open an issue on our [GitHub repo](https://github.com/digma-ai/digma) or simply report it on our [Slack](https://continuous-feedback.slack.com/join/shared\_invite/zt-2ebkq5qxs-Hpep2BFMfpxYTE9xq45w8A#/shared-invite/email) channel. To help us diagnose the problem, here is how to get some basic data:
 
