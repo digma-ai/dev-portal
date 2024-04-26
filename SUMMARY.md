@@ -64,4 +64,5 @@
 
 ## Troubleshooting
 
+* [Diagnosing Plugin Issues](troubleshooting/diagnosing-plugin-issues.md)
 * [Digma Overload Warning](troubleshooting/digma-overload-warning.md)
