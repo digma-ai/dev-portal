@@ -14,6 +14,8 @@ Then enter the following value: `#org.digma:trace`
 
 To collect the logs now select Help -> Collect Logs and Diagnostic Data
 
-<figure><img src="../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (42).png" alt="" width="375"><figcaption></figcaption></figure>
 
-###
+### Send us the logs archive
+
+You can directly DM anyone from the Digma team with the logs file you've received. If you don't want them to be public you can also report the issue first on Slack or Github and we'll provide instructions on where to send them.
