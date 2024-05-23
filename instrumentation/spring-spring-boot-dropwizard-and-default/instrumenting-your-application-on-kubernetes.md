@@ -17,7 +17,7 @@ sudo chmod +x ./kustomize/create_customization.sh
 
 {% code overflow="wrap" %}
 ```bash
-[PATH_TO_HELPER_REPO_ROOT]/kustomize/create_kustomization.sh [DIGMA_COLLECTOR_URL] [SERVICE_NAME] [ENVIRONMENT_ID] [LABEL_TARGET_SELECTOR]
+[PATH_TO_HELPER_REPO_ROOT]/kustomize/create_kustomization.sh [DIGMA_COLLECTOR_URL] [SERVICE_NAME] [ENV_NAME] [LABEL_TARGET_SELECTOR]
 ```
 {% endcode %}
 
