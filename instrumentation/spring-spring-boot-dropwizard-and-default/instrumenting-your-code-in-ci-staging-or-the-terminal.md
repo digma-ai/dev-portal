@@ -34,7 +34,7 @@ export JAVA_TOOL_OPTIONS="-javaagent:/tmp/otel/digma-agent.jar \
 -Dotel.instrumentation.jdbc-datasource.enabled=true"
 
 export OTEL_SERVICE_NAME=[SERVICE_NAME]
-export OTEL_RESOURCE_ATTRIBUTES=digma.environment=[ENVIRONMENT_NAME],digma.environment.type=Public
+export OTEL_RESOURCE_ATTRIBUTES=digma.environment=[ENV_NAME],digma.environment.type=Public
 
 java app.jar
 </code></pre>
