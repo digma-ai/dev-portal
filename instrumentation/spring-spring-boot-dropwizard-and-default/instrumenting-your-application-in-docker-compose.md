@@ -38,7 +38,7 @@ services:
             - OTEL_METRICS_EXPORTER=none
             - OTEL_LOGS_EXPORTER=none
             - OTEL_EXPORTER_OTLP_PROTOCOL=grpc
-            - OTEL_RESOURCE_ATTRIBUTES=digma.environment.id=[ENVIRONMENT_ID]
+            - OTEL_RESOURCE_ATTRIBUTES=digma.environment=[ENV_NAME],digma.environment.type=Public
             - OTEL_INSTRUMENTATION_COMMON_EXPERIMENTAL_CONTROLLER_TELEMETRY_ENABLED=true
             - OTEL_INSTRUMENTATION.EXPERIMENTAL_VIEW_TELEMETRY_ENABLED=true
             - OTEL_INSTRUMENTATION.EXPERIMENTAL_SPAN_SUPPRESSION_STRATEGY=none
@@ -47,7 +47,11 @@ services:
             - "host.docker.internal:host-gateway"
 </code></pre>
 
-To retrieve the environment identifier see the instructions on the [environment page](https://docs.digma.ai/digma-developer-guide/digma-core-concepts/environments#retrieving-the-environment-id). &#x20;
+If you've created a private environment, use the following value for `OTEL_RESOURCE_ATTRIBUTES` instead of what is listed above:
+
+`OTEL_RESOURCE_ATTRIBUTES=digna.environment=[ENV_NAME],digma.environment.type=Private,digma.user.id=[USER_ID]`          &#x20;
+
+To retrieve the values for ENV\_NAME, USER\_ID, or ENV\_TYPE click on the `How to setup` option in the observability panel on the environment tab.
 
 ### 3. Run your original Docker Compose file along with the override file
 
