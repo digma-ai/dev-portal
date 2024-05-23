@@ -8,7 +8,7 @@ description: Couch to Continuous Feedback in less than five minutes
 
 You can find the Digma Plugin in the IntelliJ Plugin Marketplace in your IDE by searching for `Digma` or visit the [plugin page ](https://plugins.jetbrains.com/plugin/19470-digma-continuous-feedback)to get it directly from there.
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 Installing the plugin will also kick off the Digma Local Engine installation. If you have Docker installed and running on your machine that should happen automatically! You can also run Digma yourself using a simple Docker Compose file. See [README (1).md](<README (1).md> "mention")for more info.
 

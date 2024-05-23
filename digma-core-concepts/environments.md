@@ -31,11 +31,11 @@ Beyond the default environments, creating additional private or shared environme
 
 Private environments are easy to create in your local deployment from the Observability Panel and through the `Add Environment` button.&#x20;
 
-<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-### Retrieving the Environment ID
+### Tagging the application data to the new environment
 
-Each Digma environment has a unique identifier that can be referenced in order to tag observability data to that environment, in whichever way you instrument your code. You can find the environment identifier by selecting the `How to Setup` option from the environment tab in the Observability panel:
+To learn how to save the application observability data under the environment you've created, click on the 'How to setup' option in the environment tab context menu:
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
