@@ -8,15 +8,38 @@ Follow [these](../../digma-core-concepts/environments.md#how-to-create-environme
 
 ### 1. Download the latest OTEL and Digma agents
 
-{% code overflow="wrap" %}
-```
-curl --create-dirs -O -L --output-dir ./otel https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v2.1.0/opentelemetry-javaagent.jar
+<details>
 
+<summary>MacOS / Linux</summary>
+
+<pre data-overflow="wrap"><code><strong>curl --create-dirs -O -L --output-dir ./otel https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v2.1.0/opentelemetry-javaagent.jar
+</strong>
 curl --create-dirs -O -L --output-dir ./otel https://github.com/digma-ai/otel-java-instrumentation/releases/latest/download/digma-otel-agent-extension.jar
 
-curl --create-dirs -O -L --output-dir /tmp/otel https://github.com/digma-ai/digma-agent/releases/latest/download/digma-agent.jar
+curl --create-dirs -O -L --output-dir ./otel https://github.com/digma-ai/digma-agent/releases/latest/download/digma-agent.jar
+</code></pre>
+
+</details>
+
+<details>
+
+<summary>Windows (PowerShell)</summary>
+
+```powershell
+# Create the directory if it doesn't exist
+New-Item -ItemType Directory -Force -Path .\otel
+
+# Download the first file
+Invoke-WebRequest -Uri "https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v2.1.0/opentelemetry-javaagent.jar" -OutFile .\otel\opentelemetry-javaagent.jar
+
+# Download the second file
+Invoke-WebRequest -Uri "https://github.com/digma-ai/otel-java-instrumentation/releases/latest/download/digma-otel-agent-extension.jar" -OutFile .\otel\digma-otel-agent-extension.jar
+
+# Download the third file
+Invoke-WebRequest -Uri "https://github.com/digma-ai/digma-agent/releases/latest/download/digma-agent.jar" -OutFile .\otel\digma-agent.jar
 ```
-{% endcode %}
+
+</details>
 
 ### 2. Add a Docker Compose override file
 
