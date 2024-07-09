@@ -55,7 +55,7 @@ services:
             - "./otel/digma-agent.jar:/otel/digma-agent.jar" 
             - "./otel/digma-otel-agent-extension.jar:/otel/digma-otel-agent-extension.jar" 
         environment:
-            - JAVA_TOOL_OPTIONS=-javaagent:/tmp/otel/digma-agent.jar -javaagent:/otel/opentelemetry-javaagent.jar -Dotel.javaagent.extensions=/otel/digma-otel-agent-extension.jar
+            - JAVA_TOOL_OPTIONS=-javaagent:/otel/digma-agent.jar -javaagent:/otel/opentelemetry-javaagent.jar -Dotel.javaagent.extensions=/otel/digma-otel-agent-extension.jar
 <strong>            - OTEL_SERVICE_NAME=[your-service]
 </strong>            - OTEL_EXPORTER_OTLP_ENDPOINT=http://host.docker.internal:5050
             - OTEL_METRICS_EXPORTER=none
