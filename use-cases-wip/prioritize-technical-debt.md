@@ -18,7 +18,7 @@ Digma assesses each asset (query, code location, endpoint etc.) to determine its
 
 For example, a slow query that is rarely used or has a marginal effect on the overall request would be ranked lower than a slow query that is heavily used and critically affects multiple flows.
 
-Using this feature requires installing [Digma Centrally ](../installation/central-on-prem-install/)and collecting data from a shared environment such as CI, Staging, Testing, or Production.
+Using this feature requires installing [Digma Centrally ](../installation/central-on-prem-install.md)and collecting data from a shared environment such as CI, Staging, Testing, or Production.
 
 
 
