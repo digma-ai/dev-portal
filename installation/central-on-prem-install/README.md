@@ -9,9 +9,9 @@ description: >-
 
 ### Understanding the Deployment Architecture
 
-Digma is deployed into the K8s cluster into its own namespace. Depending on your application deployment architecture you may want to deploy Digma with different parameters to enable the right connectivity.\\
+Digma is deployed into the K8s cluster into its own namespace. Depending on your application deployment architecture you may want to deploy Digma with different parameters to enable the right connectivity.
 
-<figure><img src="../.gitbook/assets/deployment_arch.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/deployment_arch.png" alt="" width="375"><figcaption></figcaption></figure>
 
 You should pay attention to the following regarding the deployment architecture:
 
@@ -50,7 +50,7 @@ helm install digma digma/digma --set digma.licenseKey=[DIGMA_LICENSE] --namespac
 
 **Other optional parameters:**
 
-* `size` (small | medium | large) - The cluster can be deployed in multiple scales, depending on the expected load. The default sizing is `medium`. If you select a size that is too small to handle the number of spans per second, you'll get a message from the Digma plugin prompting you to upgrade to a bigger size.
+* `size` (small | medium | large) - The cluster can be deployed in multiple scales, depending on the expected load. The default sizing is `medium`. If you select a size that is too small to handle the number of spans per second, you'll get a message from the Digma plugin prompting you to upgrade to a bigger size. Please consult the [resource-requirements.md](resource-requirements.md "mention") page for allocating the relevant nodes.
 * `digmaAnalytics.accesstoken`(any string): This is a unique key you’ll need to provide any IDE that connects to this Digma instance, you can choose any token you'd like.
 * `embeddedJaeger.enabled` (true/false) – Setting this to False will not expose the port for the Jaeger instance included with Digma. If you’re using your own APM and want to link to that instead, you can leave that at the default value (false)
 
@@ -63,6 +63,10 @@ helm install digma digma/digma --set digma.licenseKey=[DIGMA_LICENSE] --namespac
 <summary>AWS</summary>
 
 Digma can be set up to use either a public or an internal DNS. You should choose the option that better suits your requirements.
+
+**Terraform**
+
+
 
 **Internal DNS**
 
@@ -120,7 +124,7 @@ To check everything is working properly we can check the pod status and make sur
 
 For example, this is the expected output:
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Step 4: Get the IP/DNS value for the Digma deployment**
 
@@ -153,7 +157,7 @@ If you received a non-error response back you’re good to go for the next step!
 
 Once Digma is up and running you can now set your IDE plugin to connect to it. To do that, open the plugin settings (Go to IntelliJ IDEA -> Settings/Preferences and search for ‘Digma’)
 
-<figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
 * Set the `Digma API URL` parameter using the ANALYTICS-API value you’ve captured previously (By default this should be prefixed as ‘https’ and use port 5051)
 * Set the `Runtime observability backend URL` parameter using the ‘COLLECTOR-API’ value you’ve captured previously
