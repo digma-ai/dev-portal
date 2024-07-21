@@ -146,10 +146,12 @@ You can try calling the following API to validate connectivity and ensure Digma 
 
 {% code overflow="wrap" %}
 ```bash
-curl -k -X ‘GET’ \ ‘https://<ANALYTICS-API>:5051/api/Diagnostic’ \ -H “Authorization: Token <API_TOKEN>” -H ‘accept: application/json’ 
+curl -k -sS -w "%{http_code}" --location "https://<ANALYTICS-API]/about"
 
 ```
 {% endcode %}
+
+If you are using the optional  `digmaAnalytics.accesstoken` parameter, add the following argument: `-H 'Digma-Access-Token: Token <ACCESS_TOKEN>` to the `curl` command.
 
 If you received a non-error response back you’re good to go for the next step!
 
