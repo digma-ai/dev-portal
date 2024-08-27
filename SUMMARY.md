@@ -22,6 +22,7 @@
   * [Covering more of your code with Observability](instrumentation/spring-spring-boot-dropwizard-and-default/covering-more-of-your-code-with-observability.md)
   * [Using GitHub Actions (beta)](instrumentation/spring-spring-boot-dropwizard-and-default/using-github-actions-beta.md)
   * [Using Micrometer Tracing (Spring Boot 3.x only)](instrumentation/spring-spring-boot-dropwizard-and-default/using-micrometer-tracing-spring-boot-3.x-only.md)
+  * [Instrumenting code running in CLI](instrumentation/spring-spring-boot-dropwizard-and-default/instrumenting-code-running-in-cli.md)
 * [Quarkus, Micronaut, OpenLiberty](instrumentation/automatic-instrumentation-in-the-ide/quarkus-micronaut.md)
 * [Instrumentation Troubleshooting](instrumentation/instrumentation-troubleshooting.md)
 

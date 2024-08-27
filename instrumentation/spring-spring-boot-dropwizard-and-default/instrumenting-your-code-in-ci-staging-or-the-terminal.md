@@ -44,6 +44,7 @@ Substitute the following values:
 * Replace `[`DIGMA\_COLLECTOR\_URL`]` with your Digma Collector-API address. If you're running Digma locally this would be http://localhost:5050 by default
 * Make sure to substitute `[SERVICE_NAME]` with your application name:
 * Substitute the `[ENVIRONMENT_NAME]` value based on the environment identifier in Digma.  To retrieve the environment identifier see the instructions on the [environment page](https://docs.digma.ai/digma-developer-guide/digma-core-concepts/environments#retrieving-the-environment-id).&#x20;
+* If you would like to use HTTP rather than GRPC as the collector protocol, simply change the following argument above:`-Dotel.exporter.otlp.protocol=http`&#x20;
 
 ### Optional: Tracking code changes- Adding Commit hashes to your observability
 
