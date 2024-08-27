@@ -18,7 +18,7 @@ You can download and source the script locally, or simply run:
 
 {% code overflow="wrap" %}
 ```bash
-curl -o enable_observability.sh https://raw.githubusercontent.com/digma-ai/digma/main/dev/cli/enable_java_observability.sh && chmod +x enable_observability.sh && source enable_observability.sh --service_name $YOUR_SERVICE_NAME
+curl -s -o enable_observability.sh https://raw.githubusercontent.com/digma-ai/digma/main/dev/cli/enable_java_observability.sh && chmod +x enable_observability.sh && source enable_observability.sh --service_name $YOUR_SERVICE_NAME
 ```
 {% endcode %}
 
