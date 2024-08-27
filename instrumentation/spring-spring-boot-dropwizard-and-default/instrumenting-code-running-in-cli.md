@@ -30,7 +30,17 @@ To set all of the necessary environment variables and download the agent files w
 
 {% embed url="https://github.com/digma-ai/digma/blob/main/dev/cli/enable_java_observability.ps1" %}
 
-### Sending data to a central Digma instance or to a specific environment
+### What does the script do?
+
+Nothing special. It has three parts:
+
+1. Download the agent files if they are not already present to a TEMP dir
+2. Set up the `JAVA_TOOL_OPTIONS` env variables so that the Java app will use the agent when it is started
+3. Set up all of the system properties and env variables so that the data is being sent to the Digma collector port&#x20;
+
+This is just a convenience script to to help automate this process
+
+### Setting up observability to send data to a centralized Digma instance or to a specific environment
 
 If you're running Digma centrally or wish to send data to a shared environment, you need to set some additional flags when you run the script. You can find a full list of the different configuration options using the `--help` argument.
 
