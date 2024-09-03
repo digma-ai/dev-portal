@@ -1,5 +1,9 @@
 # Instrumenting your code in CI/Staging or the terminal
 
+{% hint style="info" %}
+Connecting Digma to your CI environment requires [deploying Digma centrally ](../../installation/central-on-prem-install.md)in your org.
+{% endhint %}
+
 The most straightforward way to instrument your application is simply to download the OTEL agent and Digma Extension files and then set some environment variables and system properties so that they can instrument the Java process.
 
 ### 1. Create a CI/Prod environment using the Digma UI:
