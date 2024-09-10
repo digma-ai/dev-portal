@@ -29,14 +29,14 @@ Prerequisites:
 
 The recommended way to install Digma in your org is using our Helm chart.
 
-**Step 1: Add the Digma Helm repo**
+### **Step 1: Add the Digma Helm repo**
 
 ```bash
 helm repo add digma https://digma-ai.github.io/helm-chart/
 helm repo update
 ```
 
-**Step 2: Deploy Digma using Helm**
+### **Step 2: Deploy Digma using Helm**
 
 You’ll need to provide the following parameters in the example below:
 
@@ -55,7 +55,7 @@ helm install digma digma/digma --set digma.licenseKey=[DIGMA_LICENSE] --namespac
 * `--set embeddedJaeger.enabled` (true/false) – Setting this to False will not expose the port for the Jaeger instance included with Digma. If you’re using your own APM and want to link to that instead, you can leave that at the default value (false)
 * `--set imagePullSecretName=my-secret` will configure the specs in the helm chart  to use the provided secret when pulling images from DockerHub to avoid pull rate limits.
 
-### **Cloud Deployment**
+#### **Cloud Deployment**
 
 **In order to ease the process of setting up cloud-specific resources such as load balancers, we've created some value files you can use to set up the intended networking.**
 
@@ -117,7 +117,28 @@ helm install digma digma/digma --values https://raw.githubusercontent.com/digma-
 
 </details>
 
-**Step 3: Validating the deployment**
+#### Using Ingresses instead of Load Balancers for the Digma services
+
+In order to use Ingresses instead of load balancers, you need the following prerequistes to be set up:
+
+* An [Ingress Controller ](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/) installed on the cluster
+* The DNS used by the Ingress rules should be routed to the controller
+* You should have the [Ingress class ](https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-class)name&#x20;
+
+To install Digma using Ingresses first disable load balancers:
+
+{% code overflow="wrap" %}
+```bash
+helm install digma digma/digma --set digmaAnalytics.loadbalancer=false
+--set digmaCollectorApi.loadbalancer=false --set embeddedJaeger.loadbalancer=false --set digma.licenseKey=[DIGMA_LICENSE] --namespace digma --create-namespace 
+```
+{% endcode %}
+
+You can then set the Ingress resources in a separate YAML file. Here is an example:
+
+[https://github.com/digma-ai/helm-chart/blob/main/examples/digma-with-nginx/templates/ingress.yaml](https://github.com/digma-ai/helm-chart/blob/main/examples/digma-with-nginx/templates/ingress.yaml)
+
+### **Step 3: Validating the deployment**
 
 To check everything is working properly we can check the pod status and make sure they are all in the ‘Running’ state:
 
