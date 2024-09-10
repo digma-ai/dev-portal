@@ -129,8 +129,7 @@ To install Digma using Ingresses first disable load balancers:
 
 {% code overflow="wrap" %}
 ```bash
-helm install digma digma/digma --set digmaAnalytics.loadbalancer=false
---set digmaCollectorApi.loadbalancer=false --set embeddedJaeger.loadbalancer=false --set digma.licenseKey=[DIGMA_LICENSE] --namespace digma --create-namespace 
+helm install digma digma/digma --set digmaAnalytics.loadbalancer=false --set digmaCollectorApi.loadbalancer=false --set embeddedJaeger.loadbalancer=false --set digma.licenseKey=[DIGMA_LICENSE] --namespace digma --create-namespace 
 ```
 {% endcode %}
 
