@@ -59,7 +59,7 @@ To add the commit identifier to your traces,  set the following Resource Attribu
 {% code overflow="wrap" %}
 ```bash
 git_hash=`git rev-parse --short HEAD`
-export OTEL_RESOURCE_ATTRIBUTES=digma.environment.id=[ENVIRONMENT_ID],scm.commit.id=${git_hash}
+export OTEL_RESOURCE_ATTRIBUTES=ddigma.environment=[ENV_NAME],digma.environment.type=Public,scm.commit.id=${git_hash}
 ```
 {% endcode %}
 
