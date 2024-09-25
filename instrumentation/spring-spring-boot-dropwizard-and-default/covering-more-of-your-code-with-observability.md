@@ -35,3 +35,29 @@ To set the same values from the terminal line you should set the following envir
 
 `export DIGMA_AUTOINSTRUMENT_PACKAGES=my.package.com`
 
+### Excluding specific packages
+
+If you see the traces contain too much info or if you're seeing warning that Digma is trimming the traces and wish to include more spans or remove some of the noise, you can also include an exclude expression. You can apply that as a comma separted list in the plugin settings or via the environment variable: `DIGMA_AUTOINSTRUMENT_PACKAGES_EXCLUDE_NAMES`
+
+#### Excluding  methods by name
+
+You can specify the name of the method explicitly by the name, the name relative to the class, or the fully qualified name. For example:  for example: `myMethod`, `MyClass.myMethod` and `com.org.myapp.MyClass.myMethod` would all exclude the method.
+
+#### Excluding  methods by wildcard
+
+You can also use wildcard expressions to exclude all methods that start with, end with or contain a specific string. For example: `get*` , `*String` or `*Serialization*`  would match `getUsers` `toString` and `runSerializationProcess` respectively.
+
+You can also exclude methods under a specific class using a wildcard using the `#` character.  So that `com.example.MyClass#getU*` would match all methods under the class `MyClass` that start with the given expression.
+
+#### Excluding  classes
+
+You can exclude an entire class by simply specifying the simple or the fully qualified name. For example, both of these would work:`MyClass` or `com.org.myapp.MyClass`
+
+#### Excluding packages
+
+Simply specify the package name to exclude and the package along with all of its hierarchy will be excluded. For example: `org.company.myapp.domain.data`
+
+
+
+
+
