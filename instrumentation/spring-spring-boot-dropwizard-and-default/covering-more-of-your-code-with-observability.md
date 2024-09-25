@@ -37,7 +37,7 @@ To set the same values from the terminal line you should set the following envir
 
 ### Excluding specific packages
 
-If you see the traces contain too much info or if you're seeing warning that Digma is trimming the traces and wish to include more spans or remove some of the noise, you can also include an exclude expression. You can apply that as a comma separted list in the plugin settings or via the environment variable: `DIGMA_AUTOINSTRUMENT_PACKAGES_EXCLUDE_NAMES`
+If you see the traces contain too much info or if you're seeing warning that Digma is trimming the traces and wish to include more spans or remove some of the noise, you can also include an exclude expression. You can apply that as a comma separate list in the plugin settings or via the environment variable: `DIGMA_AUTOINSTRUMENT_PACKAGES_EXCLUDE_NAMES`
 
 #### Excluding  methods by name
 
@@ -56,6 +56,18 @@ You can exclude an entire class by simply specifying the simple or the fully qua
 #### Excluding packages
 
 Simply specify the package name to exclude and the package along with all of its hierarchy will be excluded. For example: `org.company.myapp.domain.data`
+
+#### Example expression
+
+{% code overflow="wrap" %}
+```bash
+export DIGMA_AUTOINSTRUMENT_PACKAGES_EXCLUDE_NAMES=org.company.myapp.domain.data,MyClass#get*,*toString
+```
+{% endcode %}
+
+
+
+
 
 
 
