@@ -11,23 +11,24 @@ description: >-
 
 Digma is deployed into the K8s cluster into its own namespace. Depending on your application deployment architecture you may want to deploy Digma with different parameters to enable the right connectivity.
 
-<figure><img src="../.gitbook/assets/deployment_arch.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/architecture dark (3).png" alt=""><figcaption></figcaption></figure>
 
 You should pay attention to the following regarding the deployment architecture:
 
-* **Collector-API** – This architecture assumes that the application can send observability data to the IP/DNS of this endpoint. You may need to configure your setup to allow this traffic. You may also choose to expose it as a public IP in your deployment (see below under Cloud Deployment)
+* **OTEL Collector** – Your application should be able to send observability data to the IP/DNS of this endpoint. You may need to configure your setup to allow this traffic. You may also choose to expose it as a public IP in your deployment (see below under Cloud Deployment)
 * **Analytics-API** – This endpoint needs to be accessible to the IDE plugin. If you are deploying Digma into your internal network and use a VPN to access that IP you can choose not to expose this service as a public IP (see below under Cloud Deployment).
 * **Jaeger** – Digma bundles its own Jaeger service that aggregates sample traces for various insights, performance metrics, and exceptions. If you do not wish to expose this endpoint or prefer to configure your APM as the trace source, you can choose to disable this endpoint. Digma does offer enhancements over Jaeger such as a two-way mapping between the code and the trace.
+* UI - This endpoint serves the Digma web application as well as provides  templates and other UI elements for Digma email reports.
 
-### Deploying the Digma backend <a href="#deployment" id="deployment"></a>
+
 
 Prerequisites:
 
 * Access to a [Kubernetes](https://kubernetes.io/) cluster
 * [Helm](https://helm.sh/docs/intro/install/) installed locally
-* [Create a free Digma Account](https://digma.ai/sign-up) and receive back a license token
+* Have a license key. You can use the one provided to you or [create a free Digma Account](https://digma.ai/sign-up) to receive one.
 
-The recommended way to install Digma in your org is using our Helm chart.
+Installing Digma in your org is recommended using our Helm chart.
 
 ### **Step 1: Add the Digma Helm repo**
 
@@ -36,108 +37,75 @@ helm repo add digma https://digma-ai.github.io/helm-chart/
 helm repo update
 ```
 
-### **Step 2: Deploy Digma using Helm**
+### **Step 2: Create a values file to configure Digma**
 
-You’ll need to provide the following parameters in the example below:
+You can use a `values.yaml`file to configure many aspects of how Digma will function in your environment. In this section, we'll review the critical ones, but you can find a more exhaustive list on our GitHub repo [here](https://github.com/digma-ai/helm-chart/tree/main/charts/digma-ng).&#x20;
 
-* **DIGMA\_LICENSE (string)** - If you've signed up for a free Digma account you should have received a Digma license to use. You can use this link to sign up: [Create a free Digma Account](https://digma.ai/sign-up)
+#### License
+
+The license key is the only mandatory parameter for setting up Digma.
+
+```yaml
+digma:
+  licenseKey: ""
+```
+
+#### Networking
+
+How you define Digma's networking is really up to your organization's preferences and needs.  You cant  choose to have the backend services exposed publically or internally, use any type of ingress controller, or choose a load balancer instead.&#x20;
+
+You can refer to these examples:
+
+* Nginx controller with private networking
+* [Public ALB controller on AWS](https://github.com/digma-ai/helm-chart/blob/main/examples/aws/aws-alb-ingress-values.yaml)
+* Using load balancers with no ingress
+
+#### Email Preferences
+
+To activate Digma's email notifications feature you will need an email gateway API key and URL that will be used to send out the emails, these should be set in the values file as shown below. In addition, you can set other preferences regarding delivery times and recipients.&#x20;
+
+The daily reports often include links to issues, which require the report HTML to reference the Digma `ui` service DNS/IP. If you have set up a specific ingress for that service, you'll need to also specify it in the settings file to ensure the links are functional.  Enter the DNS/IP used for the `ui` service as `uiExternalBaseUrl` below. The deployment will try to autodetect it if not directly specified.
+
+```yaml
+digma:
+    report:
+        enabled: true
+        # The DNS/IP of the Digma UI service 
+        # (Will attempt to automatically detect if not set)
+        uiExternalBaseUrl: "digma.ui.acme.com"   
+        # These settings are provided by Digma
+        emailGateway:
+            apiKey: "ENTER_API_KEY_PROVIDED_BY_DIGMA_FOR_YOU_ACCOUNT"
+            emailGateway.url: "ENTER_EMAIL_URL_PROVIDED_BY_DIGMA_FOR_YOU_ACCOUNT"
+        # Time of day in which daily report will be sent, HH:mm:ss (24-hour format) 
+        scheduledTimeUtc: "09:00:00"
+        # Comma-separated list of email recipients
+        recipients.to: 	"teamleads@acme.com"
+        # Comma-separated list of email recipients in CC
+        # recipients.cc: ""
+        # Comma-separated list of email recipients in BCC
+        # recipients.bcc: ""
+
+```
+
+#### Image pull secrets
+
+If you're using image pull secrets to avoid image repository throttling you can specify them globally using this value:
+
+```
+global:
+    imagePullSecrets: []
+```
+
+### **Step 3: Deploy the Helm file**
 
 {% code overflow="wrap" %}
 ```bash
-helm install digma digma/digma --set digma.licenseKey=[DIGMA_LICENSE] --namespace digma --create-namespace
+ helm upgrade --install digma digma/digma-ng -f ./your-value.yaml -n digma
 ```
 {% endcode %}
 
-**Other optional parameters:**
-
-* `--set size` (small | medium | large) - The cluster can be deployed in multiple scales, depending on the expected load. The default sizing is `medium`. If you select a size that is too small to handle the number of spans per second, you'll get a message from the Digma plugin prompting you to upgrade to a bigger size. Please consult the [resource-requirements.md](central-on-prem-install/resource-requirements.md "mention") page for allocating the relevant nodes.
-* `--set digmaAnalytics.accesstoken`(any string): This is a unique key you’ll need to provide any IDE that connects to this Digma instance, you can choose any token you'd like.
-* `--set embeddedJaeger.enabled` (true/false) – Setting this to False will not expose the port for the Jaeger instance included with Digma. If you’re using your own APM and want to link to that instead, you can leave that at the default value (false)
-* `--set imagePullSecretName=my-secret` will configure the specs in the helm chart  to use the provided secret when pulling images from DockerHub to avoid pull rate limits.
-
-#### **Cloud Deployment**
-
-**In order to ease the process of setting up cloud-specific resources such as load balancers, we've created some value files you can use to set up the intended networking.**
-
-<details>
-
-<summary>AWS</summary>
-
-Digma can be set up to use either a public or an internal DNS. You should choose the option that better suits your requirements.
-
-**Deploying an EKS cluster**
-
-If you'd like to create an EKS cluster from scratch, we created a simple Terraform file to help automate that process. You can find it in [this](https://github.com/digma-ai/digma/tree/main/dev/eks/terraform) repo.
-
-**Internal DNS**
-
-Use the below `values` file to set up your AWS deployment using internal load balancers.
-
-{% code overflow="wrap" %}
-```bash
-helm install digma digma/digma --values https://raw.githubusercontent.com/digma-ai/helm-chart/main/src/digma-configs/aws-internal.yaml --set digma.licenseKey=[DIGMA_LICENSE] --namespace digma --create-namespace
-```
-{% endcode %}
-
-**External DNS**
-
-Use the below `values` file to set up your AWS deployment using external facing load balancers.
-
-{% code overflow="wrap" %}
-```bash
-helm install digma digma/digma --values https://raw.githubusercontent.com/digma-ai/helm-chart/main/src/digma-configs/aws-internet.yaml --set digma.licenseKey=[DIGMA_LICENSE] --namespace digma --create-namespace
-```
-{% endcode %}
-
-</details>
-
-<details>
-
-<summary>GKE</summary>
-
-**Internal passthrough**
-
-Using this value file will set up the GKE deployment using an internal load balancer service
-
-{% code overflow="wrap" %}
-```bash
-helm install digma digma/digma --values https://raw.githubusercontent.com/digma-ai/helm-chart/main/src/digma-configs/gcp-internal.yaml --set digma.licenseKey=[DIGMA_LICENSE] --namespace digma --create-namespace
-```
-{% endcode %}
-
-**External DNS**
-
-If you need to create an external internet-facing load balancer service instead, use the following value file:
-
-{% code overflow="wrap" %}
-```bash
-helm install digma digma/digma --values https://raw.githubusercontent.com/digma-ai/helm-chart/main/src/digma-configs/gcp-internet.yaml --set digma.licenseKey=[DIGMA_LICENSE] --namespace digma --create-namespace
-```
-{% endcode %}
-
-</details>
-
-#### Using Ingresses instead of Load Balancers for the Digma services
-
-In order to use Ingresses instead of load balancers, you need the following prerequistes to be set up:
-
-* An [Ingress Controller ](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/) installed on the cluster
-* The DNS used by the Ingress rules should be routed to the controller
-* You should have the [Ingress class ](https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-class)name&#x20;
-
-To install Digma using Ingresses first disable load balancers:
-
-{% code overflow="wrap" %}
-```bash
-helm install digma digma/digma --set digmaAnalytics.loadbalancer=false --set digmaCollectorApi.loadbalancer=false --set embeddedJaeger.loadbalancer=false --set digma.licenseKey=[DIGMA_LICENSE] --namespace digma --create-namespace 
-```
-{% endcode %}
-
-You can then set the Ingress resources in a separate YAML file. Here is an example:
-
-[https://github.com/digma-ai/helm-chart/blob/main/examples/digma-with-nginx/templates/ingress.yaml](https://github.com/digma-ai/helm-chart/blob/main/examples/digma-with-nginx/templates/ingress.yaml)
-
-### **Step 3: Validating the deployment**
+### **Step 4: Validating the deployment**
 
 To check everything is working properly we can check the pod status and make sure they are all in the ‘Running’ state:
 
@@ -153,11 +121,13 @@ Run the following command to get the address assigned to the **Collector**, **Pl
 
 `kubectl get services --namespace digma`
 
-Depending on your setup type get the public or internal IP for the following services:
+Depending on your setup type get the public or internal IP for the following ser
 
-* Collector-API: `digma-collector-api` or `digma-collector-api-service-lb` if you have selected to expose this service externally
-* Analytics-API: `digma-analytics-service-lb`
-* Jaeger: `digma-embedded-jaeger-lb`
+vices:
+
+* `otel-collector:` Receiver for OTEL observability
+* `analytics-api:` Provides the plugin with data and issues&#x20;
+* `jaeger-ui:` Digma's embedded Jaeger services for displaying traces
 
 Capture these addresses as you’ll need them later to setup your IDE plugin.
 
@@ -182,10 +152,9 @@ Once Digma is up and running you can now set your IDE plugin to connect to it. T
 
 <figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
-* Set the `Digma API URL` parameter using the ANALYTICS-API value you’ve captured previously (By default this should be prefixed as ‘https’ and use port 5051)
-* Set the `Runtime observability backend URL` parameter using the ‘COLLECTOR-API’ value you’ve captured previously
-* Set the `Api token` parameter using the string value you used as an access token if you've provided one during setup.
-* Set the `Jaeger Query URL`(if this option was enabled) using the JAEGER address you’ve captured previously.
+* Set the `Digma API URL` parameter using the `analytics-api` value you’ve captured previously (By default this should be prefixed as ‘https’ and use port 5051)
+* Set the `Runtime observability backend URL` parameter using the `otel-collector` value you’ve captured previously
+* Set the `Jaeger Query URL`(if this option was enabled) using the `jaeger-ui` address you’ve captured previously.
 
-Click `Apply`/`OK` to enable the changes and check that the Digma UI is not showing any connection errors.
+Click `Apply`/`OK` to enable the changes and check that the Digma UI is not indicating any connection errors.
 
