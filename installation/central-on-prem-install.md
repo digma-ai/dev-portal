@@ -58,7 +58,7 @@ You can refer to these examples:
 
 * Nginx controller with private networking
 * [Public ALB controller on AWS](https://github.com/digma-ai/helm-chart/blob/main/examples/aws/aws-alb-ingress-values.yaml)
-* Using load balancers with no ingress
+* [Using load balancers with no ingress](https://github.com/digma-ai/helm-chart/blob/main/examples/general/load_balancers_only.yaml)
 
 #### Email Preferences
 
