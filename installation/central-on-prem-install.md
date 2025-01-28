@@ -13,14 +13,12 @@ Digma is deployed into the K8s cluster into its own namespace. Depending on your
 
 <figure><img src="../.gitbook/assets/architecture dark (3).png" alt=""><figcaption></figcaption></figure>
 
-You should pay attention to the following regarding the deployment architecture:
+Digma exposes the following services as a part of its Helm deployment:
 
-* **OTEL Collector** – Your application should be able to send observability data to the IP/DNS of this endpoint. You may need to configure your setup to allow this traffic. You may also choose to expose it as a public IP in your deployment (see below under Cloud Deployment)
-* **Analytics-API** – This endpoint needs to be accessible to the IDE plugin. If you are deploying Digma into your internal network and use a VPN to access that IP you can choose not to expose this service as a public IP (see below under Cloud Deployment).
-* **Jaeger** – Digma bundles its own Jaeger service that aggregates sample traces for various insights, performance metrics, and exceptions. If you do not wish to expose this endpoint or prefer to configure your APM as the trace source, you can choose to disable this endpoint. Digma does offer enhancements over Jaeger such as a two-way mapping between the code and the trace.
-* UI - This endpoint serves the Digma web application as well as provides  templates and other UI elements for Digma email reports.
-
-
+* **collectorAPI** – Your application should be able to send observability data to the IP/DNS of this endpoint. You may need to configure your setup to allow this traffic. You may also choose to expose it as a public IP in your deployment (see below under Cloud Deployment)
+* **analyticsApi** – This endpoint needs to be accessible to the IDE plugin. If you are deploying Digma into your internal network and use a VPN to access that IP you can choose not to expose this service as a public IP.
+* **jaeger** – Digma bundles its own Jaeger service that aggregates sample traces for various insights, performance metrics, and exceptions. If you do not wish to expose this endpoint or prefer to configure your APM as the trace source, you can choose to disable this endpoint. Digma does offer enhancements over Jaeger such as a two-way mapping between the code and the trace.
+* ui - This endpoint serves the Digma web application as well as provides templates and other UI elements for Digma email reports.
 
 Prerequisites:
 
@@ -52,13 +50,26 @@ digma:
 
 #### Networking
 
-How you define Digma's networking is really up to your organization's preferences and needs.  You cant  choose to have the backend services exposed publically or internally, use any type of ingress controller, or choose a load balancer instead.&#x20;
+The service(s) created by the deployment can be exposed within or outside the cluster using any of the following approaches:
 
-You can refer to these examples:
+* **ClusterIP \[Default]**: This exposes the service(s) on a cluster-internal IP address. This approach makes the corresponding service(s) reachable only from within the cluster. Set service.type=ClusterIP to choose this approach.
+* **Ingres**s: This requires an Ingress controller to be installed in the Kubernetes cluster. Set ingress.enabled=true to expose the corresponding service(s) through Ingress.
+* **NodePort**: This exposes the service(s) on each node's IP address at a static port (the NodePort). This approach makes the corresponding service(s) reachable from outside the cluster by requesting the static port using the node's IP address, such as NODE-IP:NODE-PORT. Set service.type=NodePort to choose this approach.
+* **LoadBalancer**: This exposes the service(s) externally using a cloud provider's load balancer. Set service.type=LoadBalancer to choose this approach.
+
+The following are examples of common networking configurations:
 
 * Nginx controller with private networking
 * [Public ALB controller on AWS](https://github.com/digma-ai/helm-chart/blob/main/examples/aws/aws-alb-ingress-values.yaml)
 * [Using load balancers with no ingress](https://github.com/digma-ai/helm-chart/blob/main/examples/general/load_balancers_only.yaml)
+
+#### Storage&#x20;
+
+If you're running Digma on a public cloud, you may run into an issue with persistent volume claims affinity. Unless you are using multi-zone volumes, volumes are typically bound to a specific availability zone. The pod must be set with an affinity to that zone to ensure it can still mount the volume when it scales up/down.&#x20;
+
+Handling this is usually done by setting the [node affinity](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity) on the deployment/stateful set.  The following example values file demonstrates how to add affinity for all relevant Digma resources.
+
+{% embed url="https://github.com/digma-ai/helm-chart/blob/main/examples/node_affinity/affinity-values.yaml" %}
 
 #### Email Preferences
 
@@ -105,7 +116,41 @@ global:
 ```
 {% endcode %}
 
-### **Step 4: Validating the deployment**
+### **Step 4: Post-configuration step - setting URLs**
+
+{% hint style="info" %}
+#### If you are using an Ingress for your Digma services with a defined hostname you can skip this step as Digma will automatically use the Ingress host&#x20;
+{% endhint %}
+
+#### Set the Digma UI link used in Email notifications
+
+The Digma email reports include a link to the issue that requires the Digma UI service URL. You can set it in the values file as follows:
+
+```yaml
+digma:
+    report:
+        enabled: true
+        # The DNS/IP of the Digma UI service 
+        # (Will attempt to automatically detect if not set)
+        uiExternalBaseUrl: "digma.ui.acme.com"  
+```
+
+Set the _`uiExternalBaseUrl`_ parameter to the IP, DNS, or external IP of the _`ui`_ service, which should be accessible to the end user. &#x20;
+
+#### Set the Digma Jaeger URL for displaying traces in the web UI
+
+The web UI contains links to view traces in the Digma Jaeger instance. Set the `publicBseUrl`  value to the  IP, DNS, or external IP of th&#x65;_`jaeger`_ service, which should be accessible to the end user. &#x20;
+
+```
+jaeger:
+  # -- jaeger external or public URL, automatically detected if not set
+  # @section -- Jaeger parameters
+  publicBaseUrl: "digma.jaeger.acme.com"// Some code
+```
+
+
+
+### **Step 5: Validating the deployment**
 
 To check everything is working properly we can check the pod status and make sure they are all in the ‘Running’ state:
 
