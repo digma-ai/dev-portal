@@ -22,8 +22,8 @@ Digma exposes the following services as a part of its Helm deployment:
 
 Prerequisites:
 
-* Access to a [Kubernetes](https://kubernetes.io/) cluster
-* [Helm](https://helm.sh/docs/intro/install/) installed locally
+* Access to a [Kubernetes](https://kubernetes.io/) cluster (version 1.23 and up)
+* [Helm](https://helm.sh/docs/intro/install/) installed locally (minimum version is (1.8.0 and up)
 * Have a license key. You can use the one provided to you or [create a free Digma Account](https://digma.ai/sign-up) to receive one.
 
 Installing Digma in your org is recommended using our Helm chart.
