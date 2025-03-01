@@ -18,7 +18,7 @@ Digma exposes the following services as a part of its Helm deployment:
 * **collectorAPI** – Your application should be able to send observability data to the IP/DNS of this endpoint. You may need to configure your setup to allow this traffic. You may also choose to expose it as a public IP in your deployment (see below under Cloud Deployment)
 * **analyticsApi** – This endpoint needs to be accessible to the IDE plugin. If you are deploying Digma into your internal network and use a VPN to access that IP you can choose not to expose this service as a public IP.
 * **jaeger** – Digma bundles its own Jaeger service that aggregates sample traces for various insights, performance metrics, and exceptions. If you do not wish to expose this endpoint or prefer to configure your APM as the trace source, you can choose to disable this endpoint. Digma does offer enhancements over Jaeger such as a two-way mapping between the code and the trace.
-* ui - This endpoint serves the Digma web application as well as provides templates and other UI elements for Digma email reports.
+* **ui** - This endpoint serves the Digma web application as well as provides templates and other UI elements for Digma email reports.
 
 Prerequisites:
 
@@ -59,9 +59,9 @@ The service(s) created by the deployment can be exposed within or outside the cl
 
 The following are examples of common networking configurations:
 
-* Nginx controller with private networking
-* [Public ALB controller on AWS](https://github.com/digma-ai/helm-chart/blob/main/examples/aws/aws-alb-ingress-values.yaml)
-* [Using load balancers with no ingress](https://github.com/digma-ai/helm-chart/blob/main/examples/general/load_balancers_only.yaml)
+* [Nginx controller](https://github.com/digma-ai/helm-chart/blob/main/examples/general/load_balancers_only.yaml) on AWS `EKS`
+* [ALB controller](https://github.com/digma-ai/helm-chart/blob/main/examples/ingress/aws-alb.yaml) on AWS
+* [Simple load balancers](https://github.com/digma-ai/helm-chart/blob/main/examples/general/load_balancers_only.yaml), no ingress
 
 #### Storage&#x20;
 
@@ -166,9 +166,7 @@ Run the following command to get the address assigned to the **Collector**, **Pl
 
 `kubectl get services --namespace digma`
 
-Depending on your setup type get the public or internal IP for the following ser
-
-vices:
+Depending on your setup type, get the public or internal IP for the following services:
 
 * `otel-collector:` Receiver for OTEL observability
 * `analytics-api:` Provides the plugin with data and issues&#x20;

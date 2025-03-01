@@ -48,7 +48,7 @@ With the plugin installed, you'll be able to see new code lens overlayed on the 
 
 Digma will provide more insights as more data becomes available to it. There are multiple way to increase your observability coverage:
 
-* [covering-more-of-your-code-with-observability.md](instrumentation/spring-spring-boot-dropwizard-and-default/covering-more-of-your-code-with-observability.md "mention")
-* [instrumenting-your-code-in-ci-staging-or-the-terminal.md](instrumentation/spring-spring-boot-dropwizard-and-default/instrumenting-your-code-in-ci-staging-or-the-terminal.md "mention")
+* [covering-more-of-your-code-with-observability.md](instrumentation/java/spring-spring-boot-dropwizard-and-default/covering-more-of-your-code-with-observability.md "mention")
+* [instrumenting-your-code-in-ci-staging-or-the-terminal.md](instrumentation/java/spring-spring-boot-dropwizard-and-default/instrumenting-your-code-in-ci-staging-or-the-terminal.md "mention")
 
 ###

@@ -4,7 +4,7 @@ This is just a neat trick that allows you to collect observability data from you
 
 ### Prerequisite: Create an environment in Digma
 
-Follow [these](../../digma-core-concepts/environments.md#how-to-create-environments) instructions to create a private or CI/prod environment depending on your use case and required visibility for the new environment.&#x20;
+Follow [these](../../../digma-core-concepts/environments.md#how-to-create-environments) instructions to create a private or CI/prod environment depending on your use case and required visibility for the new environment.&#x20;
 
 ### 1. Download the latest OTEL and Digma agents
 

@@ -13,7 +13,7 @@ sudo chmod +x ./kustomize/kustomize_build.sh
 sudo chmod +x ./kustomize/create_customization.sh
 ```
 
-4. Run the `create_customization.sh` script. You'll need to pass it some parameters based on the application  and the Digma `collector-api` IP/DNS address (read more [here](../../installation/central-on-prem-install.md)). Once you run this command, the helper scripts will generate a patch that can be applied with your Helm file to instrument the application. &#x20;
+4. Run the `create_customization.sh` script. You'll need to pass it some parameters based on the application  and the Digma `collector-api` IP/DNS address (read more [here](../../../installation/central-on-prem-install.md)). Once you run this command, the helper scripts will generate a patch that can be applied with your Helm file to instrument the application. &#x20;
 
 {% code overflow="wrap" %}
 ```bash
@@ -23,7 +23,7 @@ sudo chmod +x ./kustomize/create_customization.sh
 
 * `PATH_TO_HELPER_REPO_ROOT`: The location where you cloned the helper repo to
 * `DIGMA_COLLECTOR_URL`: The URL of the Digma collector endpoint and port. For example: `http://internal.collector.dns:5050`
-* `ENVIRONMENT_ID`: The Digma [Environment](../../digma-core-concepts/environments.md) identifier to associate the observability data for this deployment with.  To retrieve the environment identifier see the instructions on the [environment page](https://docs.digma.ai/digma-developer-guide/digma-core-concepts/environments#retrieving-the-environment-id).&#x20;
+* `ENVIRONMENT_ID`: The Digma [Environment](../../../digma-core-concepts/environments.md) identifier to associate the observability data for this deployment with.  To retrieve the environment identifier see the instructions on the [environment page](https://docs.digma.ai/digma-developer-guide/digma-core-concepts/environments#retrieving-the-environment-id).&#x20;
 * `LABEL_TARGET_SELECTOR`: These are selectors used to select which application to apply the instrumentation [patch](https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/patches/) on.&#x20;
 
 Following the last step, you should have two generated files in your local directory: `patch.yaml` and `kustomization.yaml` these will be used to patch in the instrumentation logic when you run the Helm file in the next step.

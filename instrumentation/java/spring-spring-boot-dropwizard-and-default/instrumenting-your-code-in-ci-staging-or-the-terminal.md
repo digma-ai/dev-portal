@@ -1,7 +1,7 @@
 # Instrumenting your code in CI/Staging or the terminal
 
 {% hint style="info" %}
-Connecting Digma to your CI environment requires [deploying Digma centrally ](../../installation/central-on-prem-install.md)in your org.
+Connecting Digma to your CI environment requires [deploying Digma centrally ](../../../installation/central-on-prem-install.md)in your org.
 {% endhint %}
 
 The most straightforward way to instrument your application is simply to download the OTEL agent and Digma Extension files and then set some environment variables and system properties so that they can instrument the Java process.
@@ -10,9 +10,9 @@ The most straightforward way to instrument your application is simply to downloa
 
 Start by creating an environment using the Digma Observability panel. Give the environment a meaningful name and select the CI/Prod environment type.
 
-<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
 
 ### 2. Update your build file or deployment script
 
@@ -20,8 +20,8 @@ You can use the below or similar logic to download the OTEL agent and set the en
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers data-full-width="false"><code class="lang-bash"><strong>digma_url=[DIGMA_COLLECTOR_URL]
 </strong><strong>
-</strong><strong>curl --create-dirs -O -L --output-dir /tmp/otel https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v2.1.0/opentelemetry-javaagent.jar 
-</strong>
+</strong>curl --create-dirs -O -L --output-dir /tmp/otel https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v2.10.0/opentelemetry-javaagent.jar 
+
 <strong>curl --create-dirs -O -L --output-dir /tmp/otel https://github.com/digma-ai/otel-java-instrumentation/releases/latest/download/digma-otel-agent-extension.jar 
 </strong><strong>
 </strong>curl --create-dirs -O -L --output-dir /tmp/otel https://github.com/digma-ai/digma-agent/releases/latest/download/digma-agent.jar
@@ -45,7 +45,7 @@ java app.jar
 
 Substitute the following values:
 
-* Replace `[`DIGMA\_COLLECTOR\_URL`]` with your Digma Collector-API address. If you're running Digma locally this would be http://localhost:5050 by default
+* Replace `[`DIGMA\_COLLECTOR\_URL`]` with your Digma Collector-API address. If you're running Digma locally, this would be http://localhost:5050 by default
 * Make sure to substitute `[SERVICE_NAME]` with your application name:
 * Substitute the `[ENVIRONMENT_NAME]` value based on the environment identifier in Digma.  To retrieve the environment identifier see the instructions on the [environment page](https://docs.digma.ai/digma-developer-guide/digma-core-concepts/environments#retrieving-the-environment-id).&#x20;
 * If you would like to use HTTP rather than GRPC as the collector protocol, simply change the following argument above:`-Dotel.exporter.otlp.protocol=http`&#x20;
@@ -67,7 +67,7 @@ This information will be used when identifying issues. For example, here is the 
 
 
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

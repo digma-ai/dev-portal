@@ -12,25 +12,30 @@
 * [Central (on-prem) Install](installation/central-on-prem-install.md)
   * [Resource Requirements](installation/central-on-prem-install/resource-requirements.md)
 
-## Instrumentation
+## INSTRUMENTATION
 
-* [Spring, Spring Boot, Dropwizard, and default](instrumentation/automatic-instrumentation-in-the-ide/spring-spring-boot-dropwizard-and-default.md)
-  * [Automatic Instrumentation in the IDE](instrumentation/spring-spring-boot-dropwizard-and-default/automatic-instrumentation-in-the-ide.md)
-  * [Instrumenting your code in CI/Staging or the terminal](instrumentation/spring-spring-boot-dropwizard-and-default/instrumenting-your-code-in-ci-staging-or-the-terminal.md)
-  * [Instrumenting your application in Docker Compose](instrumentation/spring-spring-boot-dropwizard-and-default/instrumenting-your-application-in-docker-compose.md)
-  * [Instrumenting your application on Kubernetes](instrumentation/spring-spring-boot-dropwizard-and-default/instrumenting-your-application-on-kubernetes.md)
-  * [Covering more of your code with Observability](instrumentation/spring-spring-boot-dropwizard-and-default/covering-more-of-your-code-with-observability.md)
-  * [Using GitHub Actions (beta)](instrumentation/spring-spring-boot-dropwizard-and-default/using-github-actions-beta.md)
-  * [Using Micrometer Tracing (Spring Boot 3.x only)](instrumentation/spring-spring-boot-dropwizard-and-default/using-micrometer-tracing-spring-boot-3.x-only.md)
-  * [Instrumenting code running in CLI](instrumentation/spring-spring-boot-dropwizard-and-default/instrumenting-code-running-in-cli.md)
-* [Quarkus, Micronaut, OpenLiberty](instrumentation/automatic-instrumentation-in-the-ide/quarkus-micronaut.md)
-* [Instrumentation Troubleshooting](instrumentation/instrumentation-troubleshooting.md)
+* [.NET](instrumentation/.net.md)
+* [Java](instrumentation/java/README.md)
+  * [Automatic Instrumentation in the IDE (IntelliJ)](instrumentation/java/automatic-instrumentation-in-the-ide.md)
+  * [Spring, Spring Boot, Dropwizard, and default](instrumentation/java/spring-spring-boot-dropwizard-and-default/README.md)
+    * [Instrumenting your code in CI/Staging or the terminal](instrumentation/java/spring-spring-boot-dropwizard-and-default/instrumenting-your-code-in-ci-staging-or-the-terminal.md)
+    * [Instrumenting your application in Docker Compose](instrumentation/java/spring-spring-boot-dropwizard-and-default/instrumenting-your-application-in-docker-compose.md)
+    * [Instrumenting your application on Kubernetes](instrumentation/java/spring-spring-boot-dropwizard-and-default/instrumenting-your-application-on-kubernetes.md)
+    * [Covering more of your code with Observability](instrumentation/java/spring-spring-boot-dropwizard-and-default/covering-more-of-your-code-with-observability.md)
+    * [Using GitHub Actions (beta)](instrumentation/java/spring-spring-boot-dropwizard-and-default/using-github-actions-beta.md)
+    * [Using Micrometer Tracing (Spring Boot 3.x only)](instrumentation/java/spring-spring-boot-dropwizard-and-default/using-micrometer-tracing-spring-boot-3.x-only.md)
+    * [Instrumenting code running in CLI](instrumentation/java/spring-spring-boot-dropwizard-and-default/instrumenting-code-running-in-cli.md)
+  * [Quarkus, Micronaut, OpenLiberty](instrumentation/java/quarkus-micronaut.md)
 
-## Use Cases (WIP)
+***
 
-* [Design and write code more efficiently by understanding the system flows](use-cases-wip/understand-the-application-flows-better-for-faster-development.md)
-* [Get early feedback on bottlenecks and code issues](use-cases-wip/get-early-feedback-on-bottlenecks-and-code-issues.md)
-* [Prioritize Technical Debt](use-cases-wip/prioritize-technical-debt.md)
+* [Sending Data to Digma (all languages)](sending-data-to-digma-all-languages.md)
+
+## Use Cases
+
+* [Design and write code more efficiently by understanding the system flows](use-cases/understand-the-application-flows-better-for-faster-development.md)
+* [Get early feedback on bottlenecks and code issues](use-cases/get-early-feedback-on-bottlenecks-and-code-issues.md)
+* [Prioritize Technical Debt](use-cases/prioritize-technical-debt.md)
 
 ## Digma Core Concepts
 
