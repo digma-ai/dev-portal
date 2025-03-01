@@ -1,4 +1,4 @@
-# Sending Data to Digma (all languages)
+# Sending Data to Digma using the OTEL Collector
 
 If you’re already using OpenTelemetry (OTEL), integrating with Digma is seamless—Digma provides an OTEL receiver, so you only need to configure your system to export tracing data.
 
@@ -6,7 +6,7 @@ Not using OTEL yet? No worries! Setting up OTEL instrumentation is straightforwa
 
 ### If you're using an OpenTelemetry Collector
 
-1. Add an OTLP exporter and supply the Digma URL (ingress DNS or IP) for the `otel-collector` service. See the [central-on-prem-install.md](installation/central-on-prem-install.md "mention") page for more details.&#x20;
+1. Add an OTLP exporter and supply the Digma URL (ingress DNS or IP) for the `otel-collector` service. See the [central-on-prem-install.md](../installation/central-on-prem-install.md "mention") page for more details.&#x20;
 
 ```yaml
 # collector-config.yaml

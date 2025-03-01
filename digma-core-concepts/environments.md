@@ -31,11 +31,11 @@ Beyond the default environments, creating additional private or shared environme
 
 Private environments are easy to create in your local deployment from the Observability Panel and through the `Add Environment` button.&#x20;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Tagging the application data to the new environment
 
 To learn how to save the application observability data under the environment you've created, click on the 'How to setup' option in the environment tab context menu:
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 

@@ -14,10 +14,13 @@
 
 ## INSTRUMENTATION
 
+* [Instrumenting your code for tracing](instrumentation/instrumenting-your-code-for-tracing.md)
+* [Correlating observability and source code commits](instrumentation/correlating-observability-and-source-code-commits.md)
+* [Sending Data to Digma using the OTEL Collector](instrumentation/sending-data-to-digma-using-the-otel-collector.md)
 * [.NET](instrumentation/.net.md)
 * [Java](instrumentation/java/README.md)
   * [Automatic Instrumentation in the IDE (IntelliJ)](instrumentation/java/automatic-instrumentation-in-the-ide.md)
-  * [Spring, Spring Boot, Dropwizard, and default](instrumentation/java/spring-spring-boot-dropwizard-and-default/README.md)
+  * [Spring, Spring Boot, Dropwizard](instrumentation/java/spring-spring-boot-dropwizard-and-default/README.md)
     * [Instrumenting your code in CI/Staging or the terminal](instrumentation/java/spring-spring-boot-dropwizard-and-default/instrumenting-your-code-in-ci-staging-or-the-terminal.md)
     * [Instrumenting your application in Docker Compose](instrumentation/java/spring-spring-boot-dropwizard-and-default/instrumenting-your-application-in-docker-compose.md)
     * [Instrumenting your application on Kubernetes](instrumentation/java/spring-spring-boot-dropwizard-and-default/instrumenting-your-application-on-kubernetes.md)
@@ -26,10 +29,6 @@
     * [Using Micrometer Tracing (Spring Boot 3.x only)](instrumentation/java/spring-spring-boot-dropwizard-and-default/using-micrometer-tracing-spring-boot-3.x-only.md)
     * [Instrumenting code running in CLI](instrumentation/java/spring-spring-boot-dropwizard-and-default/instrumenting-code-running-in-cli.md)
   * [Quarkus, Micronaut, OpenLiberty](instrumentation/java/quarkus-micronaut.md)
-
-***
-
-* [Sending Data to Digma (all languages)](sending-data-to-digma-all-languages.md)
 
 ## Use Cases
 
