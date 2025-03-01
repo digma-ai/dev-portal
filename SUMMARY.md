@@ -15,9 +15,6 @@
 ## INSTRUMENTATION
 
 * [Instrumenting your code for tracing](instrumentation/instrumenting-your-code-for-tracing.md)
-* [Correlating observability and source code commits](instrumentation/correlating-observability-and-source-code-commits.md)
-* [Sending Data to Digma using the OTEL Collector](instrumentation/sending-data-to-digma-using-the-otel-collector.md)
-* [.NET](instrumentation/.net.md)
 * [Java](instrumentation/java/README.md)
   * [Automatic Instrumentation in the IDE (IntelliJ)](instrumentation/java/automatic-instrumentation-in-the-ide.md)
   * [Spring, Spring Boot, Dropwizard](instrumentation/java/spring-spring-boot-dropwizard-and-default/README.md)
@@ -29,6 +26,9 @@
     * [Using Micrometer Tracing (Spring Boot 3.x only)](instrumentation/java/spring-spring-boot-dropwizard-and-default/using-micrometer-tracing-spring-boot-3.x-only.md)
     * [Instrumenting code running in CLI](instrumentation/java/spring-spring-boot-dropwizard-and-default/instrumenting-code-running-in-cli.md)
   * [Quarkus, Micronaut, OpenLiberty](instrumentation/java/quarkus-micronaut.md)
+* [.NET](instrumentation/.net.md)
+* [Correlating observability and source code commits](instrumentation/correlating-observability-and-source-code-commits.md)
+* [Sending Data to Digma using the OTEL Collector](instrumentation/sending-data-to-digma-using-the-otel-collector.md)
 
 ## Use Cases
 
