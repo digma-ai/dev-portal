@@ -43,9 +43,7 @@ service:
 
 
 
-### Not using a collector?
-
-If you're not using a dedicated collector component to route your observability, simply follow the steps to instrument your code using OTEL and set the following environment variable to ,&#x20;
+###
 
 
 
