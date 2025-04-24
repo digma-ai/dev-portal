@@ -26,10 +26,10 @@
     * [Using Micrometer Tracing (Spring Boot 3.x only)](instrumentation/java/spring-spring-boot-dropwizard-and-default/using-micrometer-tracing-spring-boot-3.x-only.md)
     * [Instrumenting code running in CLI](instrumentation/java/spring-spring-boot-dropwizard-and-default/instrumenting-code-running-in-cli.md)
   * [Quarkus, Micronaut, OpenLiberty](instrumentation/java/quarkus-micronaut.md)
-  * [Sending Data to Digma Using the Datadog agent](instrumentation/java/sending-data-to-digma-using-the-datadog-agent.md)
 * [.NET](instrumentation/.net.md)
 * [Correlating observability and source code commits](instrumentation/correlating-observability-and-source-code-commits.md)
 * [Sending Data to Digma using the OTEL Collector](instrumentation/sending-data-to-digma-using-the-otel-collector.md)
+* [Sending Data to Digma Using the Datadog agent](instrumentation/sending-data-to-digma-using-the-datadog-agent.md)
 
 ## Use Cases
 
