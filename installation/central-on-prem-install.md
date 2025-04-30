@@ -99,9 +99,43 @@ digma:
 
 ```
 
+#### Setting up a default admin service user
+
+It is recommended to set up a default user that you can use for recovery purposes. It will also be used internally for some inter-service operations as an admin service account. This is also a requirement if you want to use the MCP Server feature.
+
+```yaml
+digma:
+    auth:
+        # -- Admin user email (must be provided together with password)
+        # @section -- Authentication
+        email:
+        # -- Admin user password (must be provided together with email)
+        # @section -- Authentication
+        password:
+        
+```
+
+#### Email verification for signing up
+
+You can set up a flow by which Digma will require users to activate their user accounts via email before signing up. You can also restrict sign-up to a whitelist of email domains so that only users under the company domain can activate.&#x20;
+
+```yaml
+digma:
+  ## Authentication parameters
+  ## 
+  auth:
+    # -- Enable email verification for new users. If enabled, emailSettings.url must be set
+    # @section -- Authentication
+    emailVerificationEnabled: false
+    # -- Comma-separated or semicolon-separated list of allowed email domains for user registration
+    # @section -- Authentication
+    allowedEmailDomains:  
+    
+```
+
 #### Image pull secrets
 
-If you're using image pull secrets to avoid image repository throttling you can specify them globally using this value:
+If you're using image pull secrets to avoid image repository throttling, you can specify them globally using this value:
 
 ```
 global:
