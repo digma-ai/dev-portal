@@ -23,7 +23,15 @@ DD_APM_ADDITIONAL_ENDPOINTS={"[REPLACE_WITH_DIGMAS_COLLECTOR_DATADOG_ENDPOINT]":
 
 Digma will automatically copy data from the Datadog traces such as the git commit hash, if present. However, to ensure the data is classified correctly within Digma, you need to add two additional tags to your tracing data. This can be done using environment variables.&#x20;
 
+```bash
+export DD_TAGS=digma.environment:$ENV_NAME,digma.environment.type:Public
+```
 
+Additionally, to use custom instrumentation or Digma auto instrumentation, you can include the following environment variable that will configure the DD agent to respect the OTEL instrumentation attributes:
+
+```bash
+export DD_TRACE_OTEL_ENABLED=true
+```
 
 
 
