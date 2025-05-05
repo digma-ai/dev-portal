@@ -25,15 +25,47 @@ span.setAttribute("my-tag", "my-value");
 
 ### Automatically instrument your code without changing it using the new Digma Extended Observability feature (beta)
 
-Digma is unrolling a new feature to allow developers to automatically instrument all functions in a specific package without having to add annotations. We are still collecting feedback so your ideas and suggestions are welcome!&#x20;
+Digma is rolling out a new feature to allow developers to automatically instrument all functions in a specific package without having to add annotations. We are still collecting feedback so your ideas and suggestions are welcome!&#x20;
 
-To enable `Extended Observability` open the Digma plugin settings page and type in the name of your application package under the `Extended Observability (beta)` property.
+### In the IDE
+
+To enable `Extended Observability` Open the Digma plugin settings page and type in the name of your application package under the `Extended Observability (beta)` property.
 
 <figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
-To set the same values from the terminal line you should set the following environment variable:
+### In testing/production environments
 
-`export DIGMA_AUTOINSTRUMENT_PACKAGES=my.package.com`
+The Digma Java agent is a preprocessor that is able to inject the OTEL span attributes for methods under specific packages. This allows adding traceability to code without making any code changes.
+
+1. Download the agent
+
+{% code overflow="wrap" %}
+```bash
+curl -O -L https://github.com/digma-ai/digma-agent/releases/latest/download/digma-agent.jar
+```
+{% endcode %}
+
+2. To use the agent, include it in your JVM options . If you're using multiple agents, make sure this one is first in the list, as it is a preprocessor.
+
+<pre class="language-bash"><code class="lang-bash"><strong>export JAVA_TOOL_OPTIONS=-javaagent:/path/to/digma-agent.jar
+</strong></code></pre>
+
+3. Specify which package you'd like to trace via a separate environment variable:
+
+```bash
+export DIGMA_AUTOINSTRUMENT_PACKAGES=my.package.com
+```
+
+4. If you're using the Datadog Java agent,  configure DD to also accept the OTEL standard instrumentation attributes:
+
+```bash
+export DD_TRACE_OTEL_ENABLED=true
+```
+
+### Gotchas with automatic instrumentation
+
+* Avoid instrumenting low-level packages that would inflate your traces to an unmanageable degree. Try to be granular about the code of interest, You can start with specific classes and expand to packages
+* Apply on dev environments before you roll out to production&#x20;
 
 ### Excluding specific packages
 
